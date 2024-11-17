@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>float e clean</title>
+
+    <style>
+        body{
+            margin-bottom: 500px;
+        }
+
+        .container{
+            border: 2px solid black;
+            padding: 16px;
+            width: 300px;
+            margin-bottom: 16px;
+            height: 300px;
+            background-color: rgba(255, 0, 0, .5);
+
+        }
+
+        .item{
+            background-color: violet;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .fit-content .item{
+            width: fit-content;
+        }
+
+        .min-content .item{
+            width: min-content;
+        }
+
+        .max-content .item{
+            width: max-content;
+        }
+
+        .overflow-hidden{
+            overflow: hidden;
+        }
+
+        .overflow-scroll{
+            overflow: scroll;
+        }
+
+        .overflow-auto{
+            overflow: auto;
+        }
+
+        .overflow-x{
+            overflow-x: hidden;
+        }
+
+        .overflow-y{
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container fit-content overflow-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, delectus.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque aspernatur laudantium aperiam sit tenetur ullam, pariatur commodi. Magni, iure voluptas quos doloribus commodi saepe?</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga modi vero quisquam repellat ut facilis dolores, laboriosam, asperiores quo, sint enim voluptate doloribus sit deleniti consequatur alias? Aspernatur, dolor ipsam fugiat rerum inventore nisi placeat ex neque. Praesentium ipsum beatae, tenetur itaque eveniet laudantium amet, modi labore eos hic obcaecati minus saepe consequuntur dolorem, enim repellendus suscipit veniam nam atque. In distinctio autem non sequi voluptates ea consequuntur nam, veniam iure ut, eaque enim dolores?</div>
+    </div>
+
+    <div class="container min-content overflow-scroll overflow-auto .overflow-x">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, delectus.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque aspernatur laudantium aperiam sit tenetur ullam, pariatur commodi. Magni, iure voluptas quos doloribus commodi saepe?</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga modi vero quisquam repellat ut facilis dolores, laboriosam, asperiores quo, sint enim voluptate doloribus sit deleniti consequatur alias? Aspernatur, dolor ipsam fugiat rerum inventore nisi placeat ex neque. Praesentium ipsum beatae, tenetur itaque eveniet laudantium amet, modi labore eos hic obcaecati minus saepe consequuntur dolorem, enim repellendus suscipit veniam nam atque. In distinctio autem non sequi voluptates ea consequuntur nam, veniam iure ut, eaque enim dolores?</div>
+    </div>
+
+    <div class="container max-content overflow-scroll overflow-auto .overflow-y">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, delectus.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque aspernatur laudantium aperiam sit tenetur ullam, pariatur commodi. Magni, iure voluptas quos doloribus commodi saepe?</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga modi vero quisquam repellat ut facilis dolores, laboriosam, asperiores quo, sint enim voluptate doloribus sit deleniti consequatur alias? Aspernatur, dolor ipsam fugiat rerum inventore nisi placeat ex neque. Praesentium ipsum beatae, tenetur itaque eveniet laudantium amet, modi labore eos hic obcaecati minus saepe consequuntur dolorem, enim repellendus suscipit veniam nam atque. In distinctio autem non sequi voluptates ea consequuntur nam, veniam iure ut, eaque enim dolores?</div>
+    </div>
+</body>
+</html>
