@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+    flex-direction: column;
+    background-color: #160631;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-hero{
+    background-color: #0a011a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 15px;
+    min-width: 450px;
+}
+
+.header-hero .h1-hero{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.header-hero .nav-ul-hero{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-ul-hero .nav-ul-hero__itens{
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.nav-ul-hero__itens a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-ul-hero__itens a:hover{
+    background-color: #28c428;
+}
+
+.main-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 74%;
+    min-width: 450px;
+    /* background-color: yellow; */
+}
+
+.main-page .h2-page{
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 40px;
+    text-align: center;
+    
+}
+
+.plans-page{
+    display: flex;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.plans{
+    position: relative;
+}
+
+.plans-page .plans{
+    background-color: #452c6e;
+    align-items: center;
+    justify-content: center;
+    width: 22vw;
+    height: 400px;
+    margin: 0 auto;
+    /* background-color: orange; */
+    border-radius: 5px;
+}
+
+.plans .h3-plans{
+    font-size: 24px;
+    text-transform: uppercase;
+    /* background-color: yellow; */
+    padding: 15px 0 4px;
+    margin: 0 15px;
+    border-bottom: 2px solid #28c428;
+    align-self: flex-start;
+}
+
+.plans .plans-precos{
+    display: flex;
+    padding: 15px 15px;
+    align-items: baseline;
+}
+
+.plans-precos .plans-precos-number{
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.plans-character-list{
+    padding: 0;
+    /* background-color: yellow; */
+    list-style-position: inside;
+}
+
+
+
+.plans-character-list .plans-character-list__itens{
+
+    padding: 5px 5px;
+}
+
+.plans-character-list .plans-character-list__itens::marker{
+    color: #28c428;
+}
+
+.plans .div-button-plans{
+    /* background-color: aqua; */
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.div-button-plans .button-plans{
+    display: inline-block;
+    background-color: #28c428;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
