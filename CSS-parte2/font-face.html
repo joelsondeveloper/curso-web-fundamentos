@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-face</title>
+
+    <style>
+
+        @font-face{
+            font-family: nadia;
+            src:
+            local("Nadia Serif"),
+            local("Nadia-Serif")
+             url(fonts/nadia/nadia-serif.ttf) format("truetype"),
+            url(fonts/nadia/nadia-serif.woff) format("woff"),
+            url(fonts/nadia/nadia-serif.svg) format("svg")
+        }
+
+        h1{
+            font-family: nadia,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+<body>
+    <h1>font-face</h1>
+</body>
+</html>
