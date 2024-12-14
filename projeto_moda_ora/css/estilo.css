@@ -1,0 +1,137 @@
+:root{
+    --font-title: "Viaoda Libre", serif;
+    --cor-text: #555
+}
+
+body{
+    font-size: 62.5%;
+    /* background-attachment: local; */
+    font-family: "roboto",sans-serif;
+    margin: 0;
+}
+
+.section1{
+    background-image: url(../imagens/topo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.header-hero{
+    background-color: #162028;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.header-hero p{
+    color: white;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin: .5rem 0 .5rem 10rem;
+}
+
+.header-hero-ul{
+    display: flex;
+    gap: 3.2rem;
+    font-size: .8rem;
+    list-style: none;
+}
+
+.header-hero-ul a{
+    color: #425564;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    transition: .5s;
+}
+
+.header-hero-ul a:hover{
+    color: white;
+    outline: 1px solid white;
+}
+
+.section2{
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.section2 h1{
+    font-family: var(--font-title);
+    font-weight: 300;
+    font-size: 2.4rem;
+}
+
+.section2 .p-principal{
+    font-size: 1rem;
+    width: 60%;
+    margin: auto;
+    display: inline-block;
+    line-height: 2;
+    color: var(--cor-text);
+}
+
+.section2 .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 65%;
+    margin: 6rem auto;
+}
+
+.cards h2{
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.cards p{
+    font-size: 1rem;
+    color: var(--cor-text);
+}
+
+.section3{
+    background-image: url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: #003d52;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.section3 .h2s{
+    margin: 5rem auto;
+    width: fit-content;
+    padding: 5rem;
+    
+}
+
+.section3 h2{
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: start;
+    margin: 0;
+}
+
+.section3 .p-principal2{
+    font-size: 1rem;
+    text-align: start;
+    width: 60%;
+    line-height: 2;
+}
+
+.footer-hero{
+    background-color: #0b171f;
+    color: #6f8597;
+    width: 100%;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+}
