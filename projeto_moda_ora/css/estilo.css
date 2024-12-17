@@ -22,19 +22,19 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 2vw;
 }
 
 .header-hero p{
     color: white;
     font-family: var(--font-title);
     font-size: 2rem;
-    margin: .5rem 0 .5rem 10rem;
+    margin: .5rem 0 .5rem 10vw;
 }
 
 .header-hero-ul{
     display: flex;
-    gap: 3.2rem;
+    gap: 3.2vw;
     font-size: .8rem;
     list-style: none;
 }
@@ -79,6 +79,7 @@ body{
     justify-content: space-around;
     width: 65%;
     margin: 6rem auto;
+    flex-wrap: wrap;
 }
 
 .cards h2{
