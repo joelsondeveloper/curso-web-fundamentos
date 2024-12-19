@@ -1,0 +1,47 @@
+:root{
+    --color-background: #2A2A2A;
+    --color-yellow: #FED001;
+}
+
+html{
+    font-size: 62.5%;
+
+}
+
+body{
+    margin: 0;
+}
+
+.section1{
+    min-height: 100vh;
+    background-image: url(imagens/HeroImage.png);
+    background-size: 60vw;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.header-hero{
+    display: flex;
+    background-color: var(--color-background);
+    color: var(--color-yellow);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-hero{
+    width: 12rem;
+    margin: 1.6rem 1.6rem 1.6rem 6vw;
+}
+
+.ul-hero{
+    display: flex;
+    font-size: 1.6rem;
+    margin-right: 6vw;
+    list-style: none;
+    gap: 2rem;
+}
+
+.ul-hero__li{
+    border: 1px solid var(--color-yellow);
+    padding: .8rem;
+}
