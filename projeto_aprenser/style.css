@@ -10,14 +10,15 @@ html{
 
 body{
     margin: 0;
+    font-family: "Maven Pro", serif;
 }
 
 .section1{
     min-height: 100vh;
     background-image: url(imagens/HeroImage.png);
-    background-size: 60vw;
+    background-size:cover;
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: 0;
 }
 
 .header-hero{
@@ -44,4 +45,34 @@ body{
 .ul-hero__li{
     border: 1px solid var(--color-yellow);
     padding: .8rem;
+    transition: 1s;
+}
+
+.ul-hero__li:hover{
+    background-color: var(--color-yellow);
+    color: #2A2A2A;
+}
+
+h1{
+    font-size: 5rem;
+    width: 40rem;
+    letter-spacing: .2rem;
+    line-height: 1.4;
+    margin: 14rem 0 1rem 4rem;
+}
+
+.section1 .cta{
+    padding: 1.6rem 5rem;
+    margin: 1rem 0 0 4rem;
+    text-decoration: none;
+    color: #2A2A2A;
+    background-color: var(--color-yellow);
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: .5rem;
+}
+
+.section1 .cta:hover{
+    outline: 2px solid #2A2A2A;
 }
