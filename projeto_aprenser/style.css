@@ -5,12 +5,14 @@
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 
 }
 
 body{
     margin: 0;
     font-family: "Maven Pro", serif;
+    background-color: #EEF3F5;
 }
 
 .section1{
@@ -48,8 +50,18 @@ body{
     transition: 1s;
 }
 
+.ul-hero__li a{
+    color: var(--color-yellow);
+    text-decoration: none;
+    transition: 1s;
+}
+
 .ul-hero__li:hover{
     background-color: var(--color-yellow);
+    
+}
+
+.ul-hero__li:hover a{
     color: #2A2A2A;
 }
 
@@ -62,17 +74,136 @@ h1{
 }
 
 .section1 .cta{
-    padding: 1.6rem 5rem;
+    padding: 1.6rem 4rem;
     margin: 1rem 0 0 4rem;
     text-decoration: none;
     color: #2A2A2A;
     background-color: var(--color-yellow);
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 800;
     border-radius: .5rem;
 }
 
 .section1 .cta:hover{
     outline: 2px solid #2A2A2A;
+}
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.h2-cursos{
+    font-size: 3rem;
+}
+
+.cursos{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cursos__itens{
+    width: 30%;
+    background-color: white;
+}
+
+.cursos__itens img{
+    width: 100%;
+}
+
+.cursos__itens-description{
+    padding: 1rem;
+}
+
+.cursos__itens-h3{
+    font-size: 2rem;
+}
+
+.cursos__itens-p{
+    font-size: 1.4rem;
+    color: #4D4D4D;
+}
+
+.section2 .cta{
+    padding: 1.6rem 4rem;
+    margin: 3rem 0 10rem 0;
+    text-decoration: none;
+    color: #2A2A2A;
+    background-color: var(--color-yellow);
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    border-radius: .5rem;
+}
+
+.section2 .cta:hover{
+    outline: 2px solid #2A2A2A;
+}
+
+.section3{
+    min-height: 85vh;
+    background-color: #003464;
+    display: flex;
+}
+
+.section3 img{
+    width: 70%;
+    height: 70%;
+    align-self: flex-end;
+    margin-left: 5rem;
+}
+
+.conteudo-escola{
+    color: #EEF3F5;
+    align-self: center;
+    padding: 0 9rem 0 3rem;
+}
+
+.conteudo-escola h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.conteudo-escola p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.section4{
+    padding: 5rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    justify-content: center;
+}
+
+.h3-contato{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto 8rem;
+}
+
+.section4 img{
+    width: 100%;
+    
+}
+
+.info-contato{
+    align-self: self-end;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+}
+
+.info-contato p{
+    margin: 0;
+    line-height: 1.2;
 }
