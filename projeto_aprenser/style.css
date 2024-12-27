@@ -89,7 +89,7 @@ h1{
     outline: 2px solid #2A2A2A;
 }
 
-.section2{
+#section2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,7 +131,7 @@ h1{
     color: #4D4D4D;
 }
 
-.section2 .cta{
+#section2 .cta{
     padding: 1.6rem 4rem;
     margin: 3rem 0 10rem 0;
     text-decoration: none;
@@ -143,17 +143,17 @@ h1{
     border-radius: .5rem;
 }
 
-.section2 .cta:hover{
+#section2 .cta:hover{
     outline: 2px solid #2A2A2A;
 }
 
-.section3{
+#section3{
     min-height: 85vh;
     background-color: #003464;
     display: flex;
 }
 
-.section3 img{
+#section3 img{
     width: 70%;
     height: 70%;
     align-self: flex-end;
@@ -176,7 +176,7 @@ h1{
     line-height: 1.8;
 }
 
-.section4{
+#section4{
     padding: 5rem 15rem;
     display: flex;
     flex-direction: column;
@@ -190,18 +190,21 @@ h1{
     margin: 0 auto 8rem;
 }
 
-.section4 img{
+#section4 iframe{
     width: 100%;
     
 }
 
 .info-contato{
-    align-self: self-end;
     font-size: 1.4rem;
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: end;
+}
+
+address{
+    text-align: end;
 }
 
 .info-contato p{
