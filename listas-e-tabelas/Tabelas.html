@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tables</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      table {
+        width: 80%;
+        margin: auto;
+        background-color: beige;
+        border-collapse: collapse;
+      }
+
+      th {
+        background-color: rgb(245, 245, 169);
+        border: 2px solid rgb(241, 241, 128);
+        padding: 16px;
+      }
+
+      td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Tabela de preços de cursos
+      </caption>
+      <thead>
+        <tr>
+          <th>Área</th>
+          <th>Curso</th>
+          <th>Investimentos</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td rowspan="3">Design</td>
+          <td>InDesign</td>
+          <td>$1.000,00</td>
+        </tr>
+        <tr>
+          <td>Photoshop</td>
+          <td>$1000,00</td>
+        </tr>
+        <tr>
+          <td>Ilustrator</td>
+          <td>$1000,00</td>
+        </tr>
+        <tr>
+          <td rowspan="4">Devolopment</td>
+          <td>HTML</td>
+          <td>$1000,00</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>$1000,00</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>$1000,00</td>
+        </tr>
+        <tr>
+          <td>PHP</td>
+          <td>$1000,00</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3">Valores sujeitos sem prévio aviso</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

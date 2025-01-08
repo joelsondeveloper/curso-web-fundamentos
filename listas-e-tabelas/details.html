@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>details</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      details{
+        color: red;
+        background-color: #ccc;
+        margin-bottom: 1em;
+        padding: .5em;
+      }
+
+      details summary{
+        cursor: pointer;
+      }
+
+      details[open]{
+        background-color: aqua;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Curso web design</h1>
+    <details open>
+        <summary>Pré-requisitos</summary>
+        <p>Para fazer esse curso é necessario conhecimento de Sistema operacional</p>
+  
+    </details>
+
+    <details>
+        <summary>Carga horaria</summary>
+        <p>180 horas</p>
+  
+    </details>
+
+  </body>
+</html>
