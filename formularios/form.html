@@ -1,36 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>formulario</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <form action="">
-        <fieldset>
-            <legend>Introdução</legend>
-            <input type="email" name="email">
-            <br><br>
+      <fieldset>
+        <legend>Introdução</legend>
+        <input type="email" name="email" />
+        <br /><br />
 
-            <label for="filhos">Quantidade de filhos</label>
-            <br>
-            <input type="number" name="" id="filhos" min="0" max="1000">
-            <br><br>
+        <label for="filhos">Quantidade de filhos</label>
+        <br />
+        <input type="number" name="" id="filhos" min="0" max="1000" />
+        <br /><br />
 
-            <input type="date" name="" id="" min="2022-01-15" max="2022-12-15">
-            <br><br>
-            
-            <label for="">possui atividade extra?</label>
-            <label>
-                <input type="radio" name="atividade">sim
-            </label>
-            <label>
-                <input type="radio" name="atividade">não
-            </label>
+        <input type="date" name="" id="" min="2022-01-15" max="2022-12-15" />
+        <br /><br />
 
-            <br><br><br>
-            <input type="submit" value="Enviar">
-        </fieldset>
+        <label for="">possui atividade extra?</label>
+        <label> <input type="radio" name="atividade" value="sim" />sim </label>
+        <label> <input type="radio" name="atividade" value="não" />não </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Área de interesse</legend>
+
+        <label>
+          <input type="checkbox" name="interesse" value="html" />HTML</label
+        >
+        <label>
+          <input type="checkbox" name="interesse" value="css" />CSS</label
+        >
+        <label>
+          <input
+            type="checkbox"
+            name="interesse"
+            value="javascript"
+          />javascript</label
+        >
+        <label>
+          <input type="checkbox" name="interesse" value="python" />python</label
+        >
+        <label>
+          <input type="checkbox" name="interesse" value="java" />java</label
+        >
+
+        <br />
+        <label
+          >Escolha uma linguagem
+          <br />
+
+          <select name="linguagem" required multiple size="4">
+            <option value="">Selecione uma</option>
+            <optgroup label="frontend">
+              <option value="react">React</option>
+              <option value="angular">Angular</option>
+              <option value="vue">Vue</option>
+            </optgroup>
+
+            <optgroup label="backend">
+              <option value="node">Node</option>
+              <option value="express">Express</option>
+              <option value="mongoDB">MongoDB</option>
+              <option value="mysql">MySQL</option>
+              <option value="postgresql">PostgreSQL</option>
+            </optgroup>
+          </select>
+
+          <input type="text" list="linguagemList" />
+          <datalist id="linguagemList">
+            <option value="react">React</option>
+            <option value="angular">Angular</option>
+            <option value="vue">Vue</option>
+            <option value="node">Node</option>
+            <option value="express">Express</option>
+            <option value="mongoDB">MongoDB</option>
+            <option value="mysql">MySQL</option>
+            <option value="postgresql">PostgreSQL</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="php">PHP</option>
+            <option value="c++">C++</option>
+            <option value="c#">C#</option>
+            <option value="go">Go</option>
+          </datalist>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mensagem</legend>
+        <textarea
+          name="msg"
+          cols="30"
+          rows="8"
+          style="resize: none"
+          maxlength="256"
+        ></textarea>
+        <br /><br />
+        <textarea name="" id="" cols="30" rows="8" readonly>
+CONTRATO DE UTILIZAÇÃO
+  1.1 REGRA 1
+
+  1.2 REGRA 2
+        </textarea>
+        <label>
+          <input type="checkbox" name="termos" required />Eu li e aceito os
+          termos e condições do contrato.
+        </label>
+
+        <br /><br />
+        <input type="file" name="" id="" />
+      </fieldset>
+
+      <input type="hidden" name="" value="abcdef" />
+
+      <br /><br /><br />
+      <input type="submit" value="Enviar" />
+      <input type="button" value="button" />
+
+      <button type="submit"><em>mandar com tag button</em></button>
+
+      <br><br>
+      <input type="range" name="" id="" min="0" max="10" step=".5">
+
+      <br><br>
+      <input type="time">
+
+      <br><br>
+      <input type="color">
     </form>
-</body>
+  </body>
 </html>
