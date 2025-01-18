@@ -1,0 +1,44 @@
+:root {
+  --color-blue: #3a68b7;
+}
+
+
+body {
+  background-color: var(--color-blue);
+  font-family: "Roboto", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+form{
+    background-color: white;
+    color: black;
+    width: 90%;
+    min-width: 25em;
+    max-width: 31.25em;
+}
+
+fieldset{
+    border: none;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    ma
+}
+
+legend{
+    color: var(--color-blue);
+    font-size: 1.5em;
+    
+}
+
+.form_buttons{
+    display: flex;
+}
+
+.login{
+    display: flex;
+}
