@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>has-table</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: .5em;
+            margin-bottom: 24px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        tr:nth-child(even){
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd){
+            background-color: white;
+        }
+
+        tr:hover{
+            background-color: #e9e9e9;
+        }
+
+        tr:has(td:first-child input[type="checkbox"]:checked){
+            background-color: #aaffaa;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>checkbox</th>
+                <th>nome</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>João</td>
+                <td>joão@email.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Maria</td>
+                <td>maria@email.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Pedro</td>
+                <td>pedro@email.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Ana</td>
+                <td>ana@email.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>José</td>
+                <td>jose@email.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elementos</title>
+
+    <style>
+
+        p::first-letter{
+            font-size: 3em;
+            float: left;
+            margin-right: .2em;
+            line-height: 1;
+        }
+
+        p::first-line{
+            color: red;
+        }
+
+        ::selection{
+            background-color: orange;
+        }
+
+        p::first-letter::selection{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat vel, sit nisi repudiandae doloribus expedita dolore distinctio corporis veniam totam molestias beatae nemo ab alias ea. Possimus dolorum voluptate voluptatem!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat vel, sit nisi repudiandae doloribus expedita dolore distinctio corporis veniam totam molestias beatae nemo ab alias ea. Possimus dolorum voluptate voluptatem!
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat vel, sit nisi repudiandae doloribus expedita dolore distinctio corporis veniam totam molestias beatae nemo ab alias ea. Possimus dolorum voluptate voluptatem!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat vel, sit nisi repudiandae doloribus expedita dolore distinctio corporis veniam totam molestias beatae nemo ab alias ea. Possimus dolorum voluptate voluptatem!
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat vel, sit nisi repudiandae doloribus expedita dolore distinctio corporis veniam totam molestias beatae nemo ab alias ea. Possimus dolorum voluptate voluptatem!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat vel, sit nisi repudiandae doloribus expedita dolore distinctio corporis veniam totam molestias beatae nemo ab alias ea. Possimus dolorum voluptate voluptatem!
+    </p>
+
+</body>
+</html>
