@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <style>
+        .div{
+            outline: 1px solid #888;
+            width: 300px;
+            margin: .5em auto;
+        }
+
+        p{
+            width: 10
+            0%;
+        }
+
+        .destaque{
+            background-color: yellow;
+        }
+
+        .div1 .destaque{
+            transform: translate(50%);
+        }
+
+        .div2 .destaque{
+            position: relative;
+            left: 25%;
+            top: 100%;
+        }
+
+        .div3 .destaque{
+            transform: rotate(15deg);
+        }
+
+        .div4 .destaque{
+            transform: scale(1.2, .8);
+        }
+
+        .div5 .destaque{
+            transform: skew(45deg, 30deg);
+        }
+
+        .div6 .destaque{
+            transform: translate(100px) rotate(30deg);
+            transform-origin: left top;
+        }
+
+        .div7 .destaque{
+            transform: rotate(45deg) translate(100px) ;
+            transform-origin: 0 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="div1 div">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+    </div>
+    <div class="div2 div">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+    </div>
+    <div class="div3 div">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+    </div>
+    <div class="div4 div">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+    </div>
+    <div class="div5 div">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+    </div>
+    <div class="div6 div">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+    </div>
+    <div class="div7 div">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, numquam?</p>
+    </div>
+
+
+</body>
+</html>

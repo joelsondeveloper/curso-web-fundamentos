@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nesting CSS</title>
+
+    <style>
+      /* .container .div1 {
+        background-color: red;
+      } */
+      .div1 {
+        background-color: yellow;
+      }
+
+      .container {
+        color: blue;
+
+        .div1 {
+          background-color: red;
+        }
+      }
+
+      .paragrafo {
+        font-weight: bold;
+
+        &.destaque {
+          color: green;
+          font-size: 20px;
+        }
+      }
+
+      a {
+        color: red;
+
+        &:hover {
+          color: blue;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div1">
+        <p class="paragrafo">Lorem, ipsum <b>dolor</b>.</p>
+      </div>
+      <div class="div2">
+        <p class="paragrafo destaque">Lorem, <b>ipsum</b> dolor.</p>
+      </div>
+    </div>
+    <div class="div1">
+      <p>Lorem, ipsum <b>dolor</b>.</p>
+    </div>
+    <div class="div2">
+      <p>Lorem, <b>ipsum</b> dolor.</p>
+    </div>
+
+    <a href="#">link</a>
+  </body>
+</html>
