@@ -1,73 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkbox</title>
 
     <style>
-        .check-group{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
+      .check-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
 
-        input[type="checkbox"]{
-            display: none;
-        }
+      .chk1[type="checkbox"] {
+        display: none;
+      }
 
-        label{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+      .chk1 + label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
 
-        label span{
-            width: 25px;
-            height: 25px;
-            background-color: red;
-            border-radius: 3px;
-            border: 1px solid black;
-            
-        }
+      .chk1 + label span {
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        border-radius: 3px;
+        border: 1px solid black;
+      }
 
-        input[type="checkbox"]:checked + label span{
-            background-color: blue;
-            
-        }
+      .chk1[type="checkbox"]:checked + label span {
+        background-color: blue;
+      }
 
-        input[type="checkbox"]:checked + label span::after{
-            content: "v";
-            color: white;
-            font-size: 1.5rem;
-            /* margin: 0 25%; */
-            position: relative;
-            left: 25%;
-            bottom: 8%;
-        }
+      .chk1[type="checkbox"]:checked + label span::after {
+        content: "v";
+        color: white;
+        font-size: 1.5rem;
+        /* margin: 0 25%; */
+        position: relative;
+        left: 25%;
+        bottom: 8%;
+      }
+
+      /* Label alternativo */
+      .lbl2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: row;
+        margin-bottom: 1rem;
+      }
+
+      .lbl2 span {
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        border-radius: 3px;
+        border: 1px solid black;
+      }
+
+
+      .switch{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1rem;
+      }
+
+      .switch input[type="checkbox"]{
+        display: none;
+      }
+
+      .switch .slider{
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 10px;
+        transition: background-color .2s ease-in-out;
+      }
+
+      .switch .slider:before {
+        content: " ";
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.2s ease-in-out;
+        transform: translateX(0);
+      }
+
+      input[type="checkbox"]:checked +.slider {
+        background-color: green;
+      }
+
+      input[type="checkbox"]:checked +.slider:before {
+        transform: translateX(20px);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>checkbox</h1>
 
     <div class="check-group">
-        <input type="checkbox" name="html" id="html">
-    <label for="html">
+      <input class="chk1" type="checkbox" name="html" id="html" />
+      <label for="html">
         <span></span>
-        HTML</label>
+        HTML</label
+      >
 
-
-    <input type="checkbox" name="css" id="css">
-    <label for="css">
+      <input class="chk1" type="checkbox" name="css" id="css" />
+      <label for="css">
         <span></span>
-        CSS</label>
+        CSS</label
+      >
 
-
-    <input type="checkbox" name="javascript" id="javascript">
-    <label for="javascript">
+      <input class="chk1" type="checkbox" name="javascript" id="javascript" />
+      <label for="javascript">
         <span></span>
-        JavaScript</label>
+        JavaScript</label
+      >
     </div>
-</body>
+
+    <hr />
+
+    <label class="lbl2" for="">
+      <input type="checkbox" />
+      <span></span>
+      HTML
+    </label>
+
+    <label class="lbl2" for="">
+      <input type="checkbox" />
+      <span></span>
+      CSS
+    </label>
+
+    <label class="lbl2" for="">
+      <input type="checkbox" />
+      <span></span>
+      JavaScript
+    </label>
+
+    <hr>
+
+    <label for="switch" class="switch">
+        <input type="checkbox" id="switch" />
+        <span class="slider"></span>
+        HTML
+    </label>
+
+    <label for="switch1" class="switch">
+        <input type="checkbox" id="switch1" />
+        <span class="slider"></span>
+        CSS
+    </label>
+
+    <label for="switch2" class="switch">
+        <input type="checkbox" id="switch2" />
+        <span class="slider"></span>
+        JavaScript
+    </label>
+  </body>
 </html>
