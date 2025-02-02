@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Projeto My Components</title>
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <a href="#">
+          <img
+            src="imagens/perfil.png"
+            alt="Joelson Vicente Quintino"
+            class="perfil-img"
+          />
+        </a>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tipografia.html">Tipografia</a></li>
+          <li><a href="cards.html">Cards</a></li>
+          <li><a href="#">Listas</a></li>
+          <li><a href="#">Formulário</a></li>
+          <li><a href="#">Botões</a></li>
+          <li><a href="#">Tabelas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1>My Components</h1>
+
+      <article class="highlight">
+        <h2>listas</h2>
+
+        <p>
+          Listas são usadas para organizar e mostrar informações em ordem, seja
+          em ordem alfabética, numérica, ou qualquer outra classificação.
+        </p>
+      </article>
+
+      <div class="row">
+        <div>
+          <h3>não ordenada</h3>
+          <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+          </ul>
+        </div>
+        <div>
+          <h3>ordenada</h3>
+          <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+          </ol>
+        </div>
+        <div>
+          <h3>alternates</h3>
+          <ul class="alternates">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <h3>Não ordenada</h3>
+          <ul>
+            <li>item 1</li>
+            <li>
+              item 2
+              <ul>
+                <li>subitem 1</li>
+                <li>
+                  subitem 2
+                  <ul>
+                    <li>subsubitem 1</li>
+                    <li>subsubitem 2</li>
+                    <li>subsubitem 3</li>
+                  </ul>
+                </li>
+                <li>subitem 3</li>
+              </ul>
+            </li>
+            <li>item 3</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Ordenada</h3>
+          <ol>
+            <li>item 1</li>
+            <li>
+              item 2
+              <ol>
+                <li>subitem 1</li>
+                <li>
+                  subitem 2
+                  <ol>
+                    <li>subsubitem 1</li>
+                    <li>subsubitem 2</li>
+                    <li>subsubitem 3</li>
+                  </ol>
+                </li>
+                <li>subitem 3</li>
+              </ol>
+            </li>
+            <li>item 3</li>
+          </ol>
+        </div>
+        <div>
+          <h3>ambas</h3>
+          <ul>
+            <li>item 1</li>
+            <li>
+              item 2
+              <ul>
+                <li>subitem 1</li>
+                <li>subitem 2</li>
+                <li>subitem 3</li>
+              </ul>
+            </li>
+            <li>item 3</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

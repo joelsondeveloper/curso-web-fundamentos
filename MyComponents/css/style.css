@@ -31,11 +31,36 @@ h4,
 h5,
 h6 {
   color: var(--primary-color);
+  margin: 0;
+}
+
+h2{
+  margin-top: 1rem;
+}
+
+.highlight {
+  border-left: 1px solid var(--primary-color);
+  font-size: 1.1em;
+  padding: 0 0 0 2em;
+  margin-bottom: 2.2em;
+}
+
+article {
+  padding: 1em 0;
+}
+
+section{
+  margin-bottom: 3rem;
+}
+
+.underline{
+  text-decoration: red wavy underline;
 }
 
 .main-header {
   flex: 0 0 26rem;
   background-color: var(--secondary-color);
+  scroll-behavior: initial;
 }
 
 .main {
@@ -82,7 +107,8 @@ a {
   box-sizing: border-box;
 }
 
-.main-nav ul a:hover {
+.main-nav ul a:hover,
+.main-nav ul a:focus {  
   background-color: var(--secondary-color-light);
   padding-right: 1rem;
 }
@@ -91,3 +117,33 @@ a {
   border-bottom: 1px solid #7b7b7b;
   padding: 0.4rem 0;
 }
+
+.card{
+  max-width: 740px;
+  background-color: var(--secondary-color);
+  padding: 0;
+}
+
+.card-content {
+  padding: .5em 1em 1em;
+}
+
+.card-content p,
+.card-title {
+  margin: 0;
+}
+
+.card-title {
+  font-size: 1.75em;
+}
+
+.card img{
+  max-width: 100%;
+}
+
+.row{
+  display: flex;
+  gap: 3rem;
+  padding-top: 1.5rem;
+}
+
