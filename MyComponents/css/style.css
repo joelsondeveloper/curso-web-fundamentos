@@ -145,5 +145,31 @@ a {
   display: flex;
   gap: 3rem;
   padding-top: 1.5rem;
+  justify-content: space-between;
 }
 
+.row > *{
+  flex: 1 0 0%;
+
+}
+
+.alternates{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.alternates li{
+  padding: 0;
+}
+
+.alternates li:not(:last-child){
+  border-bottom: 2px solid;
+}
+
+.roman{
+  list-style: upper-roman;
+}
+
+.list-emoji{
+  list-style: "\1f602";
+}
