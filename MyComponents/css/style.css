@@ -2,6 +2,8 @@
   --primary-color: #ff7833;
   --secondary-color: #31333b;
   --secondary-color-light: #444856;
+  --secondary-color-dark: #23252d;
+  --default-gap: 3rem;
 }
 
 html {
@@ -143,7 +145,7 @@ a {
 
 .row{
   display: flex;
-  gap: 3rem;
+  gap: var(--default-gap);
   padding-top: 1.5rem;
   justify-content: space-between;
 }
@@ -151,6 +153,10 @@ a {
 .row > *{
   flex: 1 0 0%;
 
+}
+
+.row .row{
+  padding-top: 0;
 }
 
 .alternates{
@@ -173,3 +179,67 @@ a {
 .list-emoji{
   list-style: "\1f602";
 }
+
+input,
+label,
+textarea,
+select{
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+  width: auto;
+}
+
+input,
+textarea,
+ select{
+  background-color: #ccc;
+  padding: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 1.6rem;
+}
+
+.btn{
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color-dark);
+  color: white;
+  font-size: 1.2rem;
+  transition: background-color .1s linear;
+  padding: .8em 1.2em;
+  border-radius: 5px;
+}
+
+.btn:hover,
+ .btn:focus{
+  background-color: var(--secondary-color-dark);
+}     
+
+.form-quiz{
+  width: calc(50% - var(--default-gap)/2);
+}
+
+.btn-stroke{
+  background-color: transparent;
+}
+
+.btn-align{
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.big-btn{
+  font-size: 1.6rem;
+}
+
+.btn-full{
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+

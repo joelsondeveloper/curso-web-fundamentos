@@ -24,10 +24,10 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="tipografia.html">Tipografia</a></li>
           <li><a href="cards.html">Cards</a></li>
-          <li><a href="#">Listas</a></li>
-          <li><a href="#">Formulário</a></li>
-          <li><a href="#">Botões</a></li>
-          <li><a href="#">Tabelas</a></li>
+          <li><a href="listas.html">Listas</a></li>
+          <li><a href="formulario.html">Formulário</a></li>
+          <li><a href="botoes.html">Botões</a></li>
+          <li><a href="tabelas.html">Tabelas</a></li>
         </ul>
       </nav>
     </header>
@@ -39,15 +39,88 @@
         <h2>Entre em contato</h2>
 
         <div class="row">
+          <form action="">
+            <div class="row">
+              <div>
+                <label for="nome">Nome:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                  placeholder="nome completo"
+                />
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+            </div>
 
-            <form action="">
+            <label for="mensagem">Digite sua mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6"></textarea>
 
-            </form>
+            <input type="submit" class="btn" />
+          </form>
 
-            <address>
-                
-            </address>
+          <address>
+            <p>
+              <b>Endereço</b> Rua 1234 somewere rd. nashville, TN 00000 United
+              States
+            </p>
+
+            <p><b>Telefone</b> (12) 3456-7890</p>
+
+            <p><b>Email</b> contato@mycomponents.com</p>
+          </address>
         </div>
+      </section>
+
+      <section>
+        <h2>Quiz</h2>
+
+        <form action="" class="form-quiz">
+          <label for="tecnologia">Qual é sua linguagem preferida?</label>
+          <select name="tecnologia" id="tecnologia">
+            <option value="null">selecione</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">Javascript</option>
+          </select>
+
+          <label>
+            Baixa Prioridade 
+            <input type="radio" name="prioridade" value="Baixa" />
+          </label>
+          <label>
+            Média Prioridade 
+            <input type="radio" name="prioridade" value="Média" />
+          </label>
+          <label>
+            Alta Prioridade 
+            <input type="radio" name="prioridade" value="Alta" />
+          </label>
+
+          <label
+            ><input type="checkbox" name="copia" value="true" /> Enive-me uma
+            cópia
+          </label>
+
+          <label
+            ><input type="checkbox" name="humano" value="true" />  Sou um humano
+          </label>
+
+          <div class="row">
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar" class="btn btn-stroke">
+          </div>
+        </form>
       </section>
     </main>
   </body>
