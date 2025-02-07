@@ -243,3 +243,39 @@ textarea,
   margin-bottom: 2rem;
 }
 
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th{
+  text-transform: uppercase;
+}
+
+th,
+td{
+  padding: 1.6rem 1rem;
+  text-align: left;
+  width: 33.3%;
+  
+}
+
+th:last-child,
+td:last-child{
+  text-align: right;
+}
+
+th,
+tr:not(:last-child){
+  border-bottom: 2px solid var(--secondary-color-dark);
+}
+
+.line-dark{
+  background-color: var(--secondary-color-dark);
+}
+
+.separate-table th:nth-child(2),
+ .separate-table td:nth-child(2){
+  border-left: 1px solid var(--secondary-color);
+  border-right: 1px solid var(--secondary-color);
+}
