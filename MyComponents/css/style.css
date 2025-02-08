@@ -19,6 +19,31 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   min-height: 100vh;
   line-height: 1.7;
+  background-image: url(../imagens/bg-unsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.redes-sociais a{
+  color: white;
+  text-decoration: none;
+  margin-right: 2.8rem;
+  transition: color .2s ease-in-out;
+  font-style: normal;
+}
+
+.redes-sociais svg{
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: currentColor;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.redes-sociais a:hover{
+  color: var(--primary-color);
 }
 
 h1 {
@@ -61,12 +86,19 @@ section{
 
 .main-header {
   flex: 0 0 26rem;
-  background-color: var(--secondary-color);
-  scroll-behavior: initial;
+  background-color: rgba(49, 51, 59, .8);
+  /* scroll-behavior: initial; */
+}
+
+.main-nav{
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .main {
-  background-color: var(--secondary-color-light);
+  /* background-color: var(--secondary-color-light); */
+  background-color: rgba(68, 72, 86, .6);
   flex: 1 0;
   padding: 4.5rem 6rem 7rem;
 }
@@ -243,7 +275,7 @@ textarea,
   margin-bottom: 2rem;
 }
 
-table{
+.table{
   width: 100%;
   border-collapse: collapse;
 }
@@ -252,30 +284,29 @@ th{
   text-transform: uppercase;
 }
 
-th,
-td{
+.table th,
+.table td{
   padding: 1.6rem 1rem;
   text-align: left;
   width: 33.3%;
   
 }
 
-th:last-child,
-td:last-child{
+.table th:last-child,
+.table td:last-child{
   text-align: right;
 }
 
-th,
-tr:not(:last-child){
+.table th,
+.table tr:not(:last-child){
   border-bottom: 2px solid var(--secondary-color-dark);
 }
 
-.line-dark{
+.alternate-table tbody tr:nth-child(odd){
   background-color: var(--secondary-color-dark);
 }
 
-.separate-table th:nth-child(2),
- .separate-table td:nth-child(2){
+.separate-table th:not(:first-child),
+ .separate-table td:not(:first-child){
   border-left: 1px solid var(--secondary-color);
-  border-right: 1px solid var(--secondary-color);
 }
