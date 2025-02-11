@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip-path</title>
+
+    <style>html{
+        font-size: 62.5%;
+    }
+    
+    body{
+        background-color: brown;
+        min-height: 100vh;
+        font-size: 1.6rem;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    h1{
+        color: white;
+        font-weight: lighter;
+    }
+
+    .postIt{
+        width: 300px;
+        background-color: white;
+        filter: drop-shadow(2px 2px 1px);
+    }
+    
+    .postIt::before{
+        position: absolute;
+        content: " ";
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+        background-color: brown;
+    }
+    
+    .postIt-content{
+        padding: 1rem 1rem 1rem 2rem;
+    }
+    
+    .postIt h2{
+        font-weight: lighter;
+    }
+    
+    .exemplo{
+        width: 0;
+        height: 0;
+        border-top: 25px solid black;
+        border-right: 25px solid transparent;
+    }
+
+    .clipPath > div{
+        width: 300px;
+        height: 300px;
+        background-image: repeating-linear-gradient(45deg, yellow 10%, orange 20%);
+        margin: 30px;
+    }
+
+    #d1{
+        clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 20% 50%);
+    }
+
+    #d2{
+        clip-path: circle(50% at center);
+    }
+
+    #d3{
+        clip-path: ellipse(50% 50px at center);
+    }
+
+    #d4{
+        clip-path: inset(20px 30px 40px 50px);
+    }
+
+    #d5{
+        clip-path: inset( 30px round 50px 20px 10px 0 / 20px 50px 20px 10px);
+    }
+    </style>
+</head>
+<body>
+    <div class="postIt">
+        <div class="postIt-content">
+          <h2>Lorem, ipsum dolor.</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            facilisi. Proin auctor nisi vel justo faucibus, in consectetur velit
+            tristique.
+          </p>
+        </div>
+      </div>
+
+      <div class="exemplo">
+
+      </div>
+
+      <section class="clipPath">
+        <div id="d1">
+
+        </div>
+        <div id="d2">
+
+        </div>
+        <div id="d3">
+
+        </div>
+        <div id="d4">
+
+        </div>
+        <div id="d5">
+
+        </div>
+      </section>
+</body>
+</html>
