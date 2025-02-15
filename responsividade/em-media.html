@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>unidade de medida</title>
-</head>
-<body>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      h1,
+      h2 {
+        font-weight: lighter;
+      }
+
+      .div {
+        outline: 2px solid red;
+        min-height: 80px;
+      }
+
+      div:nth-of-type(1) {
+        /* background-color: yellow; */
+        font-size: 32px;
+        padding: 16px;
+      }
+
+      div:nth-of-type(1) b {
+        font-size: 24px;
+      }
+
+      div:nth-of-type(2) {
+        /* background-color: yellow; */
+        font-size: 1em;
+        padding: 1em;
+      }
+
+      div:nth-of-type(2) b {
+        font-size: 1.5em;
+      }
+
+      div:nth-of-type(3) {
+        background-color: yellow;
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+      div:nth-of-type(3) b {
+        font-size: 1.5rem;
+      }
+
+      @media screen and (min-width: 53.75em) {
+        body{
+            background-color: #7d7d7d;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <h1>Unidades de medida em projetos responsivos</h1>
-</body>
+
+    <h2>pixels</h2>
+    <div class="div">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        numquam?
+      </p>
+      <p>
+        Lorem ipsum <b>dolor sit amet</b> consectetur adipisicing elit.
+        Obcaecati possimus, odio quos officiis quasi a impedit. Ducimus impedit
+        sequi laudantium.
+      </p>
+    </div>
+
+    <h2>em</h2>
+    <div class="div">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        numquam?
+      </p>
+      <p>
+        Lorem ipsum <b>dolor sit amet</b> consectetur adipisicing elit.
+        Obcaecati possimus, odio quos officiis quasi a impedit. Ducimus impedit
+        sequi laudantium.
+      </p>
+    </div>
+
+    <h2>rem</h2>
+    <div class="div">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        numquam?
+      </p>
+      <p>
+        Lorem ipsum <b>dolor sit amet</b> consectetur adipisicing elit.
+        Obcaecati possimus, odio quos officiis quasi a impedit. Ducimus impedit
+        sequi laudantium.
+      </p>
+    </div>
+  </body>
 </html>
