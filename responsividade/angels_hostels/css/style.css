@@ -1,5 +1,6 @@
 :root {
   --primary-color: #612674;
+  --default-gap: 1rem;
 }
 
 html {
@@ -65,7 +66,7 @@ body {
   background-color: color-mix(in srgb, var(--primary-color), white 10%);
 }
 
-@media screen and (min-width: 48.75rem) {
+@media screen and (min-width: 47rem) {
   .nav__max-width {
     flex-direction: row;
     justify-content: space-between;
@@ -107,6 +108,7 @@ body {
   text-align: center;
   background-color: #f6f6f6;
   padding: 1.6rem;
+  background-blend-mode: soft-light;
 }
 
 .iconPlay {
@@ -138,7 +140,7 @@ body {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 48.75rem) {
+@media screen and (min-width: 47rem) {
   .heroBanner {
     background-color: var(--primary-color);
   }
@@ -161,7 +163,7 @@ body {
   }
 }
 
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 55rem) {
   .heroBanner {
     background-image: url(../images/bg_topo_1198x670.jpg);
     background-size: cover;
@@ -170,7 +172,7 @@ body {
     justify-content: center;
     align-items: flex-end;
   }
-  .heroBanner .maxWidth{
+  .heroBanner .maxWidth {
     margin: initial;
     margin-bottom: 6.4rem;
     width: 75%;
@@ -179,20 +181,142 @@ body {
 
 @media screen and (min-width: 70rem) {
   .heroBanner {
-    background-image: linear-gradient(transparent, var(--primary-color)), url(../images/bg_topo_1600x1374.jpg);
+    background-image: linear-gradient(transparent, var(--primary-color)),
+      url(../images/bg_topo_1600x1374.jpg);
     background-position: center top;
     background-color: var(--primary-color);
     background-repeat: no-repeat;
     max-height: 80vh;
     width: 100%;
+    overflow-y: hidden;
+    padding: 0;
   }
 
   .heroBanner .maxWidth {
     width: 50%;
   }
 
-  .heroBanner .iconPlay{
+  .heroBanner .iconPlay {
     width: 11.2rem;
     height: 11.2rem;
   }
+  .heroBanner_title,
+  .heroBanner_subtitle {
+    text-shadow: 4px 4px 2px rgb(0 0 0 / 0.8);
+  }
+}
+
+.middle-content {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 3.2rem;
+}
+
+.middle-content a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.middle-content_title {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.middle-content span[class^="icon-"] {
+  color: var(--primary-color);
+  font-size: 5.6rem;
+}
+
+.middle-content p {
+  line-height: 1.5;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--default-gap);
+}
+
+.col {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.col-sm-12 {
+  width: 100%;
+}
+
+@media screen and (min-width: 47rem) {
+  .col-md-6 {
+    width: calc(50% - var(--default-gap));
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  .col-md-6 {
+    width: calc(25% - var(--default-gap));
+  }
+
+  .col-xl-6{
+    width: calc(50% - var(--default-gap));
+  }
+}
+
+.main-content{
+  padding: 3.2rem;
+}
+
+.main-content p{
+  line-height: 1.2;
+}
+
+.main-content img{
+  width: 100%;
+}
+
+.main-content_title{
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: normal;
+  letter-spacing: .4rem;
+  font-size: 2rem;
+}
+
+.main-content .row{
+  row-gap: 6.4rem;
+}
+
+.main-content .row {
+  container: contentArticle / inline-size ;
+}
+
+@container contentArticle (min-width: 37.5em) {
+  .main-content_article{
+    display: flex;
+    gap: var(--default-gap);
+  }
+
+  .main-content_title{
+    margin-top: 0;
+  }
+
+  .main-content_img img{
+    max-height: 182px;
+  }
+
+  .main-content_img{
+    flex: 0 0 25%;
+  }
+
+  .main-content_text{
+    flex-grow: 1;
+  }
+}
+
+.footer{
+  background-color: #25303e;
+  color: #83969f;
+  text-align: center;
+  padding: 2rem;
 }
