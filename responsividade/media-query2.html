@@ -20,7 +20,42 @@
 
         h1{
             margin: 0 1rem;
-            font-size: 2rem;
+            font-size: 1.5rem;
+        }
+
+        @media screen and (min-width: 37em) {
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (width > 37em) {
+            h1{
+                color: yellow;
+            }
+        }
+
+        @media screen and (max-width: 47.5em) {
+            h1{
+                color: red;
+            }
+        }
+
+        @media (width <= 47.5em){
+            h1{
+                color: white;
+            }
+        }
+
+        @media (37em <= width <= 47.5em){
+            body{
+                background-color: #ccc;
+                background-image: none;
+            }
+
+            h1{
+                color: black;
+            }
         }
     </style>
 </head>

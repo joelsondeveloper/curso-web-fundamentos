@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>figure</title>
+
+    <style>
+      .iframeContainer {
+        display: flex;
+        gap: 1rem;
+      }
+
+      iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>figure</h1>
+
+    <figure>
+        <audio controls autoplay loop>
+            <source src="media/mozart_trompa.mp3" type="audio/mp3">
+            <source src="media/mozart_trompa.ogg" type="audio/ogg">
+            <p>o seu browser não suporta o recurso de audio</p>
+         </audio>
+         <figcaption>Narração sobre algo</figcaption>
+    </figure>
+  </body>
+</html>

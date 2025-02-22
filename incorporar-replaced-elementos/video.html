@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video</title>
+
+    <style>
+        ::cue{
+            padding: 16px;
+            color: red;
+            font-family: 1.3em;
+            background-color: rgb(0, 0, 0, .5);
+        }
+    </style>
+  </head>
+  <body>
+    <video controls>
+        <source src="media/video.mp4" type="video/mp4">
+        <source src="media/video.ogv" type="video/ogv">
+        <source src="media/video.webm" type="video/webm">
+        <track src="media/track.pt.vtt" kind="captions" srclang="pt" label="portugues">
+        <track src="media/track.en.vtt" kind="captions" srclang="en" label="ingles">
+        <p>o seu browser não suporta o video</p>
+    </video>
+  </body>
+</html>
