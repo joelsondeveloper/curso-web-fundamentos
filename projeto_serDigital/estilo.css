@@ -1,0 +1,217 @@
+:root {
+  --dark: #272d38;
+  --light: #fff;
+  --primary-color: #8eadd5;
+  --primary-color-dark: #3f3f3f;
+  --gray: #f6f6f6;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+  text-align: center;
+  margin: 0;
+}
+
+.content-wrapper-center {
+  padding: 1rem;
+  max-width: 67.25em;
+  margin: auto;
+}
+
+.header-menu {
+  list-style-type: none;
+  padding: 0;
+  text-align: right;
+
+  /* TODO: funcionar com hamburguer menu */
+  display: none;
+}
+
+.header-menu a {
+  display: block;
+  padding: 2em 0;
+}
+
+a {
+  color: inherit;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.header {
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: var(--light);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--primary-color-dark);
+}
+
+img {
+  max-width: 100%;
+}
+
+.brands h2 {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #667085;
+}
+
+.brands ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: var(--gray);
+  border-radius: 5px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.hide {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.testemunho {
+  background-color: var(--gray);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.contato {
+  background-color: var(--gray);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.contato_image {
+  display: none;
+}
+
+.footer {
+  background-color: var(--gray);
+  padding: 3rem 0;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.logo {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.copyright {
+  white-space: nowrap;
+}
+
+.hero,
+.brands,
+.branding,
+.testemunhos,
+.contato {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+  grid-auto-flow: dense;
+}
+
+.row > .sm-12 {
+  grid-column: span 12;
+}
+
+@media screen and (min-width: 48em) {
+  .row > .md-3 {
+    grid-column: span 3;
+  }
+
+  .row > .md-4 {
+    grid-column: span 4;
+  }
+
+  .row > .md-6 {
+    grid-column: span 6;
+  }
+
+  .row > .md-9 {
+    grid-column: span 9;
+  }
+
+  .row > .md-1-6 {
+    grid-column: 1 / 7;
+  }
+
+  .row > .md-7-12 {
+    grid-column: 7 / 13;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .row > .lg-3 {
+    grid-column: span 3;
+  }
+
+  .row > .lg-4 {
+    grid-column: span 4;
+  }
+
+  .row > .lg-5 {
+    grid-column: span 5;
+  }
+
+  .row > .lg-6 {
+    grid-column: span 6;
+  }
+
+  .row > .lg-7 {
+    grid-column: span 7;
+  }
+
+  .row > .lg-1-5 {
+    grid-column: 1 / 6;
+  }
+
+  .row > .lg-8-12 {
+    grid-column: 8 / 13;
+  }
+}

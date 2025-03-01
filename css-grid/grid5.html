@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid 3</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .gridContainer {
+        width: 90%;
+        background: #ccc;
+        gap: 10px;
+      }
+
+      .gridItem {
+        background-color: orange;
+        font-family: sans-serif;
+        padding: 15px;
+      }
+
+      /* grid */
+
+      .gridContainer {
+        display: grid;
+        grid-template-rows: 100px 200px;
+        grid-auto-flow: column;
+        grid-auto-columns: 50px 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gridContainer">
+      <div class="gridItem">1</div>
+      <div class="gridItem">2</div>
+      <div class="gridItem">3</div>
+      <div class="gridItem">4</div>
+      <div class="gridItem">5</div>
+      <div class="gridItem">6</div>
+      <div class="gridItem">7</div>
+      <div class="gridItem">8</div>
+    </div>
+  </body>
+</html>
