@@ -11,7 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css" />
+
+
   </head>
 
   <body>
@@ -21,6 +25,8 @@
           ><img src="imagens/SER-DIGITAL.svg" alt="Logotipo Ser digital"
         /></a>
         <nav>
+          <input type="checkbox" class="menu-btn" id="menu">
+          <label for="menu" class="menu-icon"><span class="nav-icon"></span></label>
           <ul class="header-menu">
             <li><a href="index.html#home">home</a></li>
             <li><a href="index.html#sobre">sobre</a></li>
@@ -181,23 +187,31 @@
 
           <ul class="icons">
             <li>
-              <a href="#" class="icon brands alt fa-instagram"
-                ><span class="label">Instagram</span></a
+              <a href="#" 
+                >
+                <i class="fa-brands fa-square-instagram"></i>
+                <span aria-hidden="true" class="label hide">Instagram</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-twitter"
-                ><span class="label">Twitter</span></a
+              <a href="#" 
+                >
+                <i class="fa-brands fa-square-twitter"></i>
+                <span aria-hidden="true" class="label hide">Twitter</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-linkedin-in"
-                ><span class="label">LinkedIn</span></a
+              <a href="#" 
+                >
+                <i class="fa-brands fa-linkedin"></i>
+                <span aria-hidden="true" class="label hide">LinkedIn</span></a
               >
             </li>
             <li>
-              <a href="#" class="icon brands alt fa-youtube-f"
-                ><span class="label">Youtube</span></a
+              <a href="#" 
+                >
+                <i class="fa-brands fa-youtube"></i>
+                <span aria-hidden="true" class="label hide">Youtube</span></a
               >
             </li>
           </ul>

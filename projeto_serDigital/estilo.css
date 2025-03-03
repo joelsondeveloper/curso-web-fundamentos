@@ -43,14 +43,19 @@ body {
   list-style-type: none;
   padding: 0;
   text-align: right;
+  
 
   /* TODO: funcionar com hamburguer menu */
-  display: none;
+  /* display: none; */
+}
+
+.header-menu li{
+  padding: .25em 0;
 }
 
 .header-menu a {
   display: block;
-  padding: 2em 0;
+  padding: 1.75em 0;
 }
 
 a {
@@ -89,6 +94,10 @@ h2 {
 
 img {
   max-width: 100%;
+}
+
+.brands {
+  text-align: center;
 }
 
 .brands h2 {
@@ -200,14 +209,23 @@ img {
   container: testemunho / inline-size;
 }
 
-.testemunho{
+.testemunho {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-@container testemunho (min-width: 660px) {
+.icons li {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.icons li + li {
+  margin-left: 1rem;
+}
+
+@container testemunho (min-width: 41.25em) {
   .testemunho {
     flex-direction: row;
     align-items: center;
@@ -215,8 +233,6 @@ img {
     gap: 1rem;
   }
 }
-
-
 
 @media screen and (min-width: 48em) {
   body {
@@ -231,15 +247,14 @@ img {
     font-size: 2.875rem;
   }
 
-  .header {
-    display: flex;
-    justify-content: space-between;
+  .header{
     align-items: center;
   }
 
-  .header-menu {
-    display: block;
-    margin: 0;
+  
+
+  .menu-btn, .menu-icon{
+    display: none;
   }
 
   .header-menu li {
@@ -345,4 +360,82 @@ img {
   }
 }
 
+/* hamburguer menu */
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header nav{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 20px;
+  
+}
+
+.header-menu{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 52px;
+  background-color: white;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height .3s ;
+  margin: 0;
+  padding-right: 1rem;  
+  padding-left: 1rem;
+}
+
+.menu-btn:checked ~ .header-menu,
+.header-menu:focus-within{
+  max-height: 100vh;
+}
+
+.menu-btn:checked + .menu-icon .nav-icon{
+  background-color: transparent;
+}
+
+@media screen and (min-width: 48em) {
+  .header-menu{
+    position: static;
+    max-height: inherit;
+    margin: 0;
+    background-color: inherit;
+  }
+}
+
+.menu-icon {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-icon {
+  background-color: #333;
+  display: inline-block;
+  height: 2px;
+  width: 24px;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  background-color: #333;
+  display: inline-block;
+  height: 2px;
+  width: 24px;
+  position: relative;
+}
+
+.nav-icon::after {
+  transform: translateY(-28px);
+  background-color: red;
+}
+
+.nav-icon::before {
+  transform: translateY(-20px);
+  background-color: blue;
+}
