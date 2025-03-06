@@ -251,8 +251,6 @@ img {
     align-items: center;
   }
 
-  
-
   .menu-btn, .menu-icon{
     display: none;
   }
@@ -371,7 +369,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  height: 20px;
+  /* height: 20px; */
   
 }
 
@@ -379,7 +377,7 @@ img {
   position: absolute;
   left: 0;
   right: 0;
-  top: 52px;
+  top: 70px;
   background-color: white;
   max-height: 0;
   overflow-y: hidden;
@@ -411,6 +409,7 @@ img {
   position: relative;
   cursor: pointer;
   user-select: none;
+  /* height: 24px; */
 }
 
 .nav-icon {
@@ -418,6 +417,9 @@ img {
   display: inline-block;
   height: 2px;
   width: 24px;
+  /* position: absolute; */
+  top: 0;
+  right: 0;
 }
 
 .nav-icon::before,
@@ -427,15 +429,28 @@ img {
   display: inline-block;
   height: 2px;
   width: 24px;
-  position: relative;
+  position: absolute;
 }
 
 .nav-icon::after {
-  transform: translateY(-28px);
-  background-color: red;
+  transform: translateY(8px);
+  transition: transform .2s ease;
 }
 
 .nav-icon::before {
-  transform: translateY(-20px);
-  background-color: blue;
+  transform: translateY(-8px);
+  transition: transform .2s ease;
 }
+
+.menu-btn:checked + .menu-icon .nav-icon::before{
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked + .menu-icon .nav-icon::after{
+  transform: rotate(45deg);
+}
+
+ .menu-btn:focus-visible + .menu-icon{
+  outline: 2px solid black;
+  outline-offset: 3px;
+ }
