@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card 3D</title>
+
+    <style>
+      body {
+          font-family: sans-serif;
+      }
+
+      .cena {
+          border: 2px solid #ccc;
+          width: 300px;
+          height: 400px;
+          margin: 60px;
+          perspective: 600px;
+      }
+
+      .card{
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          transition: transform .5s ease-in-out;
+          position: relative;
+          transform-origin: right center;
+      }
+
+      .cena:hover .card{
+          transform: translateX(-100%) rotatey(-180deg);
+      }
+
+      .card-face {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          backface-visibility: hidden;
+      }
+
+      .card-face-front{
+          background-color: red;
+      }
+
+      .card-face-back{
+          background-color: blue;
+          transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cena">
+      <div class="card">
+        <div class="card-face card-face-front">front</div>
+        <div class="card-face card-face-back">back</div>
+      </div>
+    </div>
+  </body>
+</html>

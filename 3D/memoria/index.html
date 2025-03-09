@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Memória 3D</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="jogo">
+      <h1>Jogo da Memória</h1>
+
+      <div class="container-cartas" id="cartas-container">
+        <!-- Cartas serão geradas dinamicamente -->
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const imagens = [
+          "img/01.png",
+          "img/02.jpg",
+          "img/03.jpg",
+          "img/04.png",
+          "img/05.png",
+          "img/06.jpg",
+          "img/07.jpg",
+          "img/08.jpg",
+        ];
+
+        // Duplicando as cartas para formar pares
+        let cartas = [...imagens, ...imagens];
+        
+        // Embaralhando as cartas
+        cartas = cartas.sort(() => Math.random() - 0.5);
+
+        const container = document.getElementById("cartas-container");
+        
+        cartas.forEach((imagem, index) => {
+          const cardId = `card${index + 1}`;
+          const cardHtml = `
+            <input type="checkbox" id="${cardId}" class="hidden" />
+            <label for="${cardId}" class="card">
+                <div class="face front"><img src="${imagem}" alt="Carta" /></div>
+                <div class="face back"><img src="img/back.png" alt="Verso" /></div>
+            </label>
+          `;
+          container.innerHTML += cardHtml;
+        });
+      });
+    </script>
+  </body>
+</html>

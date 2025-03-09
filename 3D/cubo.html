@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cubo 3D</title>
+
+    <style>
+      :root {
+        --x: 0deg;
+        --y: 0deg;
+        --z: 0deg;
+      }
+
+      :has([name="x"][value="15"]:checked) {
+        --x: 15deg;
+      }
+
+      :has([name="x"][value="45"]:checked) {
+        --x: 45deg;
+      }
+
+      :has([name="x"][value="90"]:checked) {
+        --x: 90deg;
+      }
+
+      :has([name="x"][value="135"]:checked) {
+        --x: 135deg;
+      }
+
+      :has([name="x"][value="180"]:checked) {
+        --x: 180deg;
+      }
+
+      :has([name="x"][value="270"]:checked) {
+        --x: 270deg;
+      }
+
+      :has([name="y"][value="15"]:checked) {
+        --y: 15deg;
+      }
+
+      :has([name="y"][value="45"]:checked) {
+        --y: 45deg;
+      }
+
+      :has([name="y"][value="90"]:checked) {
+        --y: 90deg;
+      }
+
+      :has([name="y"][value="135"]:checked) {
+        --y: 135deg;
+      }
+
+      :has([name="y"][value="180"]:checked) {
+        --y: 180deg;
+      }
+
+      :has([name="y"][value="270"]:checked) {
+        --y: 270deg;
+      }
+
+      :has([name="z"][value="15"]:checked) {
+        --z: 15deg;
+      }
+
+      :has([name="z"][value="45"]:checked) {
+        --z: 45deg;
+      }
+
+      :has([name="z"][value="90"]:checked) {
+        --z: 90deg;
+      }
+
+      :has([name="z"][value="135"]:checked) {
+        --z: 135deg;
+      }
+
+      :has([name="z"][value="180"]:checked) {
+        --z: 180deg;
+      }
+
+      :has([name="z"][value="270"]:checked) {
+        --z: 270deg;
+      }
+
+
+
+      /* @property --x {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 0deg;
+      }
+
+      @property --y {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 0deg;
+      }
+
+      @property --z {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 0deg;
+      } */
+
+      body {
+        font-family: sans-serif;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        gap: 7rem;
+      }
+
+      .cena {
+        width: 300px;
+        height: 300px;
+        border: 2px solid #ccc;
+        perspective: 600px;
+      }
+
+      .cubo {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform: translateZ(-150px) rotateX(var(--x)) rotateY(var(--y)) rotateZ(var(--z));
+        transition: transform 0.5s;
+      }
+
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.2);
+        outline: 3px solid black;
+        color: white;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* .cubo{
+            transform: rotateY(25deg) rotateX(25deg);
+            
+        } */
+
+      .face-1 {
+        transform: translateZ(150px) rotateY(0deg);
+        background-color: red;
+      }
+
+      .face-2 {
+        transform: translateX(150px) rotatey(90deg);
+        background-color: green;
+      }
+
+      .face-3 {
+        transform: translateX(-150px) rotateY(90deg);
+        background-color: blue;
+      }
+
+      .face-4 {
+        transform: translateZ(-150px);
+        background-color: yellow;
+      }
+
+      .face-5 {
+        transform: translatey(-150px) rotatex(90deg);
+        background-color: orange;
+      }
+
+      .face-6 {
+        transform: translatey(150px) rotatex(-90deg);
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <div class="x-axis">
+        Eixo X
+        <label> <input type="radio" name="x" value="15" />15&deg </label>
+        <label> <input type="radio" name="x" value="45" />45&deg </label>
+        <label> <input type="radio" name="x" value="90" />90&deg </label>
+        <label> <input type="radio" name="x" value="135" />135&deg </label>
+        <label> <input type="radio" name="x" value="180" />180&deg </label>
+        <label> <input type="radio" name="x" value="270" />270&deg </label>
+      </div>
+      <div class="y-axis">
+        Eixo y
+        <label> <input type="radio" name="y" value="15" />15&deg </label>
+        <label> <input type="radio" name="y" value="45" />45&deg </label>
+        <label> <input type="radio" name="y" value="90" />90&deg </label>
+        <label> <input type="radio" name="y" value="135" />135&deg </label>
+        <label> <input type="radio" name="y" value="180" />180&deg </label>
+        <label> <input type="radio" name="y" value="270" />270&deg </label>
+      </div>
+      <div class="z-axis">
+        Eixo Z
+        <label> <input type="radio" name="z" value="15" />15&deg </label>
+        <label> <input type="radio" name="z" value="45" />45&deg </label>
+        <label> <input type="radio" name="z" value="90" />90&deg </label>
+        <label> <input type="radio" name="z" value="135" />135&deg </label>
+        <label> <input type="radio" name="z" value="180" />180&deg </label>
+        <label> <input type="radio" name="z" value="270" />270&deg </label>
+      </div>
+    </div>
+    <div class="cena">
+      <div class="cubo">
+        <div class="face face-1">1</div>
+        <div class="face face-2">2</div>
+        <div class="face face-3">3</div>
+        <div class="face face-4">4</div>
+        <div class="face face-5">5</div>
+        <div class="face face-6">6</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D perspective</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .cena {
+        border: 2px solid #ccc;
+        width: 300px;
+        aspect-ratio: 1;
+        margin: 80px;
+      }
+
+      .plano {
+        background-color: red;
+      }
+
+      #cena1 {
+        perspective: 600px;
+      }
+
+      #cena1 .plano {
+        width: 200px;
+        margin: 50px;
+        height: 200px;
+        transform: rotateY(25deg);
+      }
+
+      #cena2 .plano {
+        width: 200px;
+        margin: 50px;
+        height: 200px;
+        transform: perspective(600px) rotateY(25deg);
+      }
+
+      #cena3, #cena4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+
+      #cena3 .plano, #cena4 .plano {
+        margin: 1rem;
+      }
+
+      #cena3{
+        perspective: 600px;
+        /* perspective-origin: center bottom; */
+      }
+
+      #cena3 .plano {
+        transform: rotateY(45deg);
+      }
+
+      #cena4 .plano{
+        transform: perspective(600px) rotateY(45deg);
+        backface-visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cena" id="cena1">
+      <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena2">
+      <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena3">
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena4">
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+      <div class="plano">plano</div>
+    </div>
+  </body>
+</html>
