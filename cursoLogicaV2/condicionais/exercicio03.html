@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercicio</title>
+  </head>
+  <body>
+    <h1>exercicio 3</h1>
+
+    <script>
+      let n1 = parseFloat(prompt("digite a nota 1"));
+      let n2 = parseFloat(prompt("digite a nota 2"));
+
+      if (isNaN(n1) || isNaN(n2)) {
+        alert("digite apenas numeros");
+      } else if (n1 > 10 || n2 > 10) {
+        alert("digite apenas notas menores que 10");
+      } else if (n1 < 0 || n2 < 0) {
+        alert("digite apenas notas maiores que 0");
+      } else {
+        let media = (n1 + n2) / 2;
+
+        if (media > 4 && n1 > 0 && n2 > 0) {
+          alert("aprovado");
+        } else {
+          alert("reprovado");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -9,10 +9,17 @@
     <h1>exercicio 2</h1>
 
     <script>
-      let n1 = parseFloat(prompt("digite um numero de 0 a 10"));
-      let n2 = parseFloat(prompt("digite outro numero de 0 a 10"));
-      let isAproved = (n1 + n2) / 2 > 4 && n1 > 0 && n2 > 0
-      alert(isAproved ? "Aprovado" : "Reprovado");
+      let n1 = parseFloat(prompt("digite a nota 1"));
+      let n2 = parseFloat(prompt("digite a nota 2"));
+      let media = (n1 + n2) / 2;
+
+      if (media > 4) {
+        alert("Aprovado");
+      } else {
+        alert("Reprovado");
+      }
+
+
     </script>
   </body>
 </html>
