@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercicio</title>
+  </head>
+  <body>
+    <h1>exercicio 4 - Descubra o tipo das variaveis</h1>
+
+    <script>
+      let tipo = 0;
+      tipo = "";
+
+      switch (typeof tipo) {
+        case "string":
+            alert("Variavel é string");
+            break;
+        case "number":
+            alert("Variavel é number");
+            break;
+        case "boolean":
+            alert("Variavel é boolean");
+            break;
+        case "null":
+            alert("Variavel é null");
+            break;
+        case "undefined":
+            alert("Variavel é undefined");
+            break;
+        default:
+            alert("Variavel é outro tipo");
+      }
+    </script>
+  </body>
+</html>
