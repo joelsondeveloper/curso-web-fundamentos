@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>exercicio08 - dados pares 10 x</h1>
+
+    <script>
+      let d1 = undefined;
+      let d2 = undefined;
+
+      let i = 0;
+
+      let total = 0;
+
+      while (i < 3) {
+        d1 = parseInt(Math.random() * 6) + 1;
+        d2 = parseInt(Math.random() * 6) + 1;
+
+        if ((d1 + d2) % 2 === 0) {
+          i++;
+        }
+
+        if (d1 === d2) {
+          console.log(d1 + " " + d2 + " não contabilizado");
+          continue;
+        }
+        console.log(d1 + " " + d2);
+        total++;
+      }
+
+      //   console.log("Total de rodadas de dados: " + total)
+      console.log(`total de rodadas de dados: ${total}`);
+    </script>
+  </body>
+</html>
