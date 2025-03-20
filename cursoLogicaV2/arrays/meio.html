@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrays</title>
+  </head>
+  <body>
+    <h1>item do meio</h1>
+
+    <script>
+      const arr = [
+        "a",
+        7,
+        undefined,
+        23,
+        "7",
+        16,
+        2,
+        null,
+        "cacau",
+        100,
+        0,
+        "joelson",
+        1
+      ];
+
+      const meio = Math.floor(arr.length / 2)
+      if(arr.length % 2 == 0) {
+        const itemMeio = (arr[meio] + arr[meio - 1]) / 2;
+        console.log("Item do meio: " + itemMeio);
+      }else if(arr.length % 2 != 0) {
+        const itemMeio = arr[meio];
+        console.log("Item do meio: " + itemMeio);
+      }
+    </script>
+  </body>
+</html>

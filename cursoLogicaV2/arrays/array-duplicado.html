@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrays</title>
+  </head>
+  <body>
+    <h1>array-duplicados</h1>
+
+    <script>
+      let numeros = [4,7,8,23,16,3,6,19,100,0]
+      let numeros2 = []
+
+      for (let i = 0; i < numeros.length; i++) {
+        let numero = numeros[i] * 2
+
+        // numeros2[numeros2.length] = numero
+        numeros2.push(numero)
+      }
+
+      console.log(numeros2)
+    </script>
+  </body>
+</html>

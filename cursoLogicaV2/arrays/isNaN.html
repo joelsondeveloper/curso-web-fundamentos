@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrays</title>
+  </head>
+  <body>
+    <h1>isNan, undefined and null?</h1>
+
+    <script>
+      const arr = [
+        "a",
+        7,
+        undefined,
+        23,
+        "7",
+        16,
+        2,
+        null,
+        "cacau",
+        100,
+        0,
+        "joelson",
+        1,
+      ];
+
+      let NotNumber = false;
+
+      for (let i = 0; i < arr.length; i++) {
+        if (isNaN(arr[i]) || arr[i] === undefined || arr[i] === null) {
+          NotNumber = true;
+          break;
+        }
+      }
+
+      console.log(NotNumber);
+    </script>
+  </body>
+</html>

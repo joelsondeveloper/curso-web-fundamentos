@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrays</title>
+  </head>
+  <body>
+    <h1>soma de impares</h1>
+
+    <script>
+      const numeros = [4, 7, 8, 23, 16, 3, 6, 19, 100, 0];
+
+      let soma = 0;
+
+      for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 !== 0) {
+          soma += numeros[i];
+        }
+      }
+      alert("Soma dos elementos ímpares: " + soma);
+    </script>
+  </body>
+</html>

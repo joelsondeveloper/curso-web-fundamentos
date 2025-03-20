@@ -9,11 +9,18 @@
     <h1>exercicio01 - arrays</h1>
 
     <script>
-      let nomes = ["joão", "jose", "beatriz", "joelson"] // sentido literal
+      // let nomes = ["joão", "jose", "beatriz", "joelson"] // sentido literal
+      let nomes = new Array("joão", "jose", "beatriz", "joelson", "ricardo", "luciane") // sintaxe função construtora
 
-      while (nomes.length){
-        
+      let nome = prompt("digite seu nome: ")
+
+      nomes[nomes.length] = nome
+
+      for (let i = 0; i < nomes.length; i++) {
+        document.write("nome: " + nomes[i] + "<br/>")
       }
+
+      document.write("a lista de nomes possui: " + nomes.length + " elementos")
     </script>
   </body>
 </html>
