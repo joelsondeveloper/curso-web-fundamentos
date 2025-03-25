@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="titulo">um titulo qualquer</h1>
+    <p id="paragrafo">
+      este é apenas um paragrafo contendo um texto <i>italico</i> qualquer
+    </p>
+
+    <hr />
+
+    <input type="text" id="user" />
+
+    <hr />
+
+    <h2>lista de tarefas</h2>
+    <ol id="listaTarefas">
+      <li>aprender css</li>
+      <li>aprender javascript</li>
+      <li>aprendr DOM profundamente</li>
+      <li>criar algo</li>
+    </ol>
+
+    <script>
+      const lista = document.getElementById("listaTarefas");
+      let novaTarefa = "Aplicar a vagas de emprego";
+      lista.innerHTML += `<li>${novaTarefa}</li>`;
+    </script>
+  </body>
+</html>

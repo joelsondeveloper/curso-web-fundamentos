@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objetos</title>
+  </head>
+  <body>
+    <h1>carro KM/L</h1>
+
+    <script>
+      const carro = {
+        marca: "fiat",
+        modelo: "uno",
+        ano: "2023",
+        km: 10000,
+        combustivel: "gasolina",
+        litrosConsumidos: 625,
+      };
+
+      const mediaKmPorLitro = carro.km / carro.litrosConsumidos;
+
+      document.write(
+        `O carro ${carro.marca} ${carro.modelo} ano ${carro.ano} fez em média ${mediaKmPorLitro} Km/L de ${carro.combustivel}`
+      );
+    </script>
+  </body>
+</html>

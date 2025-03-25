@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <h1>função area do triangulo</h1>
+
+    <input
+      type="number"
+      id="largura"
+      placeholder="Digite a largura do triangulo"
+    />
+    <input
+      type="number"
+      id="altura"
+      placeholder="Digite a altura do triangulo"
+    />
+    <button onclick="areaTriangulo()">area do triangulo</button>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      function areaTriangulo() {
+        const larguraValor = parseFloat(
+          document.getElementById("largura").value
+        );
+        const alturaValor = parseFloat(document.getElementById("altura").value);
+
+        const area = (larguraValor * alturaValor) / 2;
+
+        output.innerHTML = `A área do triângulo de largura ${larguraValor} e altura ${alturaValor} é ${area.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>

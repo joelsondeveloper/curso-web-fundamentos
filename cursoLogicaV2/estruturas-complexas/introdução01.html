@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>estruturas complexas</title>
+  </head>
+  <body>
+    <ul id="listaPessoas">
+      <!-- <li>joelson: joelson@server</li>
+      <li>lucas: lucas@server</li>
+      <li>guilherme: guilherme@server</li> -->
+    </ul>
+
+    <script>
+      const pessoas = [
+        { nome: "joelson", email: "joelson@server" },
+        { nome: "lucas", email: "lucas@server" },
+        { nome: "guilherme", email: "guilherme@server" },
+        { nome: "ana", email: "ana@server" },
+        { nome: "joao", email: "joao@server" },
+      ];
+
+      const listaPessoas = document.getElementById("listaPessoas");
+
+      for (let i = 0; i < pessoas.length; i++) {
+        listaPessoas.innerHTML += `<li>${pessoas[i].nome}: ${pessoas[i].email}`
+      }
+    </script>
+  </body>
+</html>

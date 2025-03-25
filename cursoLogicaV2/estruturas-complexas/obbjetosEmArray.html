@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>estruturas complexas</title>
+
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tabela de produtos</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>produto</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaProdutos"></tbody>
+    </table>
+    <script>
+      const produtos = [
+        { nome: "camiseta", preco: 25.0, quantidade: 50 },
+        { nome: "calça", preco: 50.0, quantidade: 30 },
+        { nome: "bermuda", preco: 80.0, quantidade: 20 },
+        { nome: "sapato", preco: 60.0, quantidade: 25 },
+        { nome: "tenis", preco: 100.0, quantidade: 15 },
+        { nome: "meia", preco: 15.0, quantidade: 75 },
+        { nome: "blusa", preco: 40.0, quantidade: 40 },
+      ];
+
+      const tabelaProdutos = document.getElementById("tabelaProdutos");
+
+      for (let i = 0; i < produtos.length; i++) {
+        tabelaProdutos.innerHTML += `<tr> <td>${produtos[i].nome}</td> <td>R$ ${produtos[i].preco.toFixed(2)}</td> <td>${produtos[i].quantidade}</td> </tr>`;
+      }
+    </script>
+  </body>
+</html>

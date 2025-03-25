@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objetos</title>
+  </head>
+  <body>
+    <h1>Pessoa</h1>
+
+    <script>
+      const endereco = {
+        logradouro: "rua do amor",
+        numero: 123,
+      };
+
+      let pessoa = {
+        nome: "joelson",
+        sobrenome: "vicente",
+        endereco,
+      };
+
+      document.write(
+        `${pessoa.nome} ${pessoa.sobrenome} mora em ${pessoa.endereco.logradouro}, numero ${pessoa.endereco.numero}`
+      );
+
+      //   for .. in serve pra interagir com um objeto
+      for (const prop in pessoa) {
+        console.log(prop);
+        console.log(pessoa[prop]);
+      }
+    </script>
+  </body>
+</html>
