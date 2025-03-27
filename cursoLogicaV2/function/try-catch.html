@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TryCatch</title>
+  </head>
+  <body>
+    <h1>try...catch(error)</h1>
+
+    <div id="output"></div>
+
+    <script>
+      // let obj = {
+      //   nome: "João",
+      //   email: "joao@teste.com",
+      // };
+
+      // obj = null;
+
+      // try {
+      //   document.getElementById("output").innerHTML = `nome: ${obj.nome} - email: ${obj.email}`;
+      // } catch (e) {
+      //   alert(e.message);
+        
+      // } finally {
+      //   console.log("finally executado");
+      //   document.getElementById("output").innerHTML += "<br>finally executado";
+      // }
+
+      // alert("fim do programa")
+    </script>
+
+    <script src="area.js"></script>
+
+    <script>
+      try{
+
+        console.log(calcularAreaRetangulo(2, 3))
+      } catch(e){
+        alert(e.message)
+      }
+
+      console.log(calcularAreaTriangulo(2, 3))
+    </script>
+  </body>
+</html>

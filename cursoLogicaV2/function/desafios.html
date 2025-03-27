@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <h1>desafios function</h1>
+
+
+    <script>
+
+      // some 2 numeros
+      function somar(n1, n2) {
+        return n1 + n2;
+      }
+      console.log(somar(5, 3)); // 8
+
+      // simples calculadora
+      function calcular(n1, n2, operador) {
+        switch (operador) { 
+          case "+":
+            return n1 + n2;
+
+          case "-":
+            return n1 - n2;
+
+          case "*":
+            return n1 * n2;
+
+          case "/":
+            return n1 / n2;
+        
+          default:
+            console.log("Operador inválido");
+        }
+      }
+      console.log(calcular(5, 3, "-")); // 15
+
+      // verificar se numero é par
+      function isPar(num) {
+        return num % 2 === 0;
+      }
+      console.log(isPar(6)); // true
+
+      // verificar se é bissexto
+      function isBissexto(ano) {
+        return ano % 4 === 0 && (ano % 100 !== 0 || ano % 400 === 0)
+      }
+      console.log(isBissexto(2000)); // true
+    </script>
+  </body>
+</html>
