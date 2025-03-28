@@ -15,8 +15,16 @@
 
       console.log(n);
 
-      n = n.toString(2);
+      n = n.toString(15);
       console.log(n, typeof n);
+
+      function teste(params) {
+        params = params !== undefined ? params : 10;
+        console.log(params);
+      }
+
+      teste();
+      teste(0);
     </script>
   </body>
 </html>

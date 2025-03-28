@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vetor, array, lista e matriz</title>
+  </head>
+  <body>
+    <h1>vetor, array, lista e matriz</h1>
+
+    <script>
+      const notas = [
+        [3, 5, 6, 1],
+        [2, 8, 4, 9],
+        [10, 3, 5, 7],
+      ];
+
+      //   console.log(notas[1])
+      //   console.log(notas[1][2])
+
+      //   console.log(notas[2][1])
+
+      for (let i = 0; i < notas.length; i++) {
+        const notasAluno = notas[i];
+
+        for (let j = 0; j < notasAluno.length; j++) {
+          console.log(notasAluno[j]); // matrizes
+        }
+      }
+    </script>
+  </body>
+</html>
