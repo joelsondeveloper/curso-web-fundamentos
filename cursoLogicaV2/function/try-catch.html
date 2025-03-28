@@ -41,7 +41,17 @@
         alert(e.message)
       }
 
-      console.log(calcularAreaTriangulo(2, 3))
+      try {
+        console.log(calcularAreaTriangulo(2, 3))
+      } catch (e) {
+        console.log(e.message)
+      }
+
+      try {
+        console.log(calcularAreaCirculo("a"))
+      } catch (e) {
+        console.log(e.message)
+      }
     </script>
   </body>
 </html>

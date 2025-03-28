@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>particularidades</title>
+  </head>
+  <body>
+    <h1>var vs let vs const</h1>
+
+    <script>
+      // var
+      // var teste = "teste";
+      // var teste = 1000;
+      // console.log(teste); // 10
+
+      function teste() {
+
+        const arr = [1, 2];
+
+        let i = arr.length;
+
+        for (let i = 0; i < 5; i++) {
+          console.log(i);
+        }
+
+        console.log(i);
+      }
+
+      let teste2 = "teste2";
+
+      teste2 = 2000;
+
+      console.log(teste2);
+
+      teste();
+    </script>
+  </body>
+</html>
