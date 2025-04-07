@@ -4,15 +4,17 @@
 // }
 // console.log(init())
 
+"use strict";
+
 (function (n1, n2, n3) {
-  let isValid = false;
-  console.log("init menu", isValid, n1, n2, n3);
+  isValid = false;
+  console.log("init menu", isValid);
 
   function init() {
     isValid = true;
     console.log("init menu");
   }
   init();
-})(10,20,30);
+})(window, document);
 
-init()
+console.log("isValid", isValid);
