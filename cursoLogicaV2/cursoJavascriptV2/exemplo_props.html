@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title1">Curso javascript completo</h1>
+
+    <main class="cmain" id="idmain">
+      <h2>subtitulo</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, minima?
+      </p>
+    </main>
+
+    <form action="#">
+      <input type="text" id="txtnome" placeholder="nome" /><br />
+      <input
+        type="text"
+        id="txtemail"
+        placeholder="email"
+        maxlength="10"
+        class="inputEmail"
+      /><br />
+      <input type="checkbox" id="contrato" />
+      <label for="contrato">Li e aceito o contrato</label>
+      <textarea cols="30" rows="10" readonly>
+Este contrato é um acordo entre o usuário e a empresa. O usuário concorda em não compartilhar informações confidenciais e a empresa se compromete a proteger os dados do usuário. O não cumprimento deste contrato pode resultar em penalidades legais.
+        </textarea
+      >
+    </form>
+
+    <script>
+      const txtnome = document.getElementById("txtnome");
+      const txtemail = document.getElementById("txtemail");
+      const labelContrato = document.querySelector("label[for='contrato']");
+
+      txtnome.value = "Lucas";
+      txtnome.disabled = true;
+      txtemail.readOnly = true;
+      console.log(txtnome.value);
+      console.log(labelContrato.htmlFor);
+      console.log(txtemail.maxLength);
+      console.log(txtemail.className);
+    </script>
+  </body>
+</html>
