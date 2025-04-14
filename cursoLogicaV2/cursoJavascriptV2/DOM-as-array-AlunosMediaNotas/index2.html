@@ -150,26 +150,24 @@
     <script>
       (function () {
 
+        const trHeader = document.querySelector("thead tr");
+        const thsHeader = trHeader.querySelectorAll("th");
+        const thsAlunosNotas = document.querySelectorAll("[aluno-nota]");
+        const INDICES_NOTAS = {
+        };
+        Array.from(thsAlunosNotas).forEach( function(th) {
+            let property = th.getAttribute("aluno-nota");
+            INDICES_NOTAS[property] = pegaIndice(property);
+        } )
+
         function pegaIndice(indice) {
-          const trHeader = document.querySelector("thead tr");
-          const thsHeader = trHeader.querySelectorAll("th");
-
           const th = trHeader.querySelector(`[aluno-nota="${indice}"]`);
-          console.log(th);
 
-          // thsHeader.indexOf(th);
           const i = Array.prototype.indexOf.call(thsHeader, th);
 
           return i;
         }
 
-        const INDICES_NOTAS = {
-          n1: pegaIndice("n1"),
-          n2: pegaIndice("n2"),
-          n3: pegaIndice("n3"),
-          n4: pegaIndice("n4"),
-          media: pegaIndice("media"),
-        };
         const trs = document.querySelectorAll("tbody tr");
 
         let x = 0;
