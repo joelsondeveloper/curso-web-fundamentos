@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>teste DOM</h1>
+
+    <div class="container">
+      <p>teste 1</p>
+      <p>lorem <a href="#">link</a> .</p>
+      <p>teste 2</p>
+
+      <h2>lista</h2>
+      <ul>
+        <li>item 1</li>
+        <li>
+          item 2
+          <ul>
+            <li>item 2.a</li>
+            <li>item 2.b</li>
+            <li>item 2.c</li>
+          </ul>
+        </li>
+        <li>item <a href="#">link</a></li>
+      </ul>
+    </div>
+
+    <script>
+      
+        const title = document.createElement('h1');
+        const atributo = document.createAttribute('id');
+        atributo.value = 'title';
+        title. setAttributeNode(atributo);
+
+        title.setAttribute("title", "title inserido dinamicamente")
+        title.setAttribute("style", "color: red")
+        const text = document.createTextNode('Olá Mundo');
+        title.appendChild(text);
+
+        title.textContent = 'texto inserido com textContent';
+
+        console.log(title);
+
+        // document.body.appendChild(title);
+
+        const title2 = document.createElement('h1');
+        title2.textContent = 'Olá Mundo 2';
+
+        const list = document.querySelector('ul');
+
+        const container = document.querySelector('.container');
+
+        document.querySelector(".container").insertBefore(title2, list)
+        document.querySelector(".container").insertBefore(title2, container.firstElementChild)
+
+    </script>
+  </body>
+</html>

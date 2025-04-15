@@ -32,6 +32,24 @@
         console.log(document.body);
         console.log(document.body.parentElement);
         console.log(document.body.parentNode);
+
+        const h2 = document.querySelector('h2');
+        console.log(h2.nextElementSibling)
+
+        const h2PreviousElementSibling = h2.previousElementSibling;
+        h2PreviousElementSibling.style.background = 'red';
+
+        console.log(h2PreviousElementSibling)
+
+        const link = document.querySelector('a');
+        const list = document.querySelector('ul ul');
+
+        console.log(link);
+        console.log(link.parentElement.lastChild);
+        console.log(link.parentElement.lastElementChild);
+
+        console.log(list.lastElementChild.hasChildNodes());
+        console.log(list.lastElementChild.childNodes);
     </script>
   </body>
 </html>
