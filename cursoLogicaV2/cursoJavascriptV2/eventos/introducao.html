@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container2 {
+       background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>eventos</h1>
+    <div id="container">
+      <button id="btn1">botao 1</button>
+      <button id="btn2" onclick="console.log('clicou no botao 2')">
+        botao 2
+      </button>
+      <button id="btn3">botao 3</button>
+    </div>
+    <hr>
+    <h1>delegação de eventos</h1>
+    <div class="container2">
+      <button>botao 1</button>
+      <button>botao 2</button>
+      <button>botao 3</button>
+    </div>
+
+    <script>
+      const btn1 = document.querySelector("#btn1");
+      const btn2 = document.querySelector("#btn2");
+      const btn3 = document.querySelector("#btn3");
+
+      function clicou() {
+        console.log("clicou no botao 1");
+      }
+
+      btn1.onclick = function () {
+        console.log("clicou no botao 2");
+      };
+
+      btn1.onclick = clicou;
+
+      btn2.addEventListener("click", clicou);
+
+      btn2.addEventListener("click", function () {
+        console.log("click função anonima");
+      });
+
+      btn2.onclick = function () {
+        console.log("click funcao anonima 2");
+      };
+
+      btn3.addEventListener(
+        "click",
+        function (event) {
+          console.log(event);
+          event.stopPropagation();
+          console.log("click funcao anonima 3");
+        },
+        false
+      );
+
+      document.addEventListener(
+        "click",
+        function (e) {
+          console.log("click no documento");
+          console.log(e.target);
+        },
+        false
+      );
+
+      const container = document.querySelector("#container");
+      container.addEventListener(
+        "click",
+        function (e) {
+          console.log("click no container");
+        },
+        true
+      );
+
+      const container2 = document.querySelector(".container2");
+      const btns = container2.querySelectorAll(".container2 button");
+
+    //   [...btns].forEach( btn => {
+    //     btn.addEventListener("click", function (e) {
+    //       console.log("click em btn");
+    //       e.stopPropagation();
+    //       console.log(e.target);
+    //     });
+    //   } )
+
+    container2.addEventListener("click", function (e) {
+        console.log("click em container2");
+        console.log(e.target);
+        console.log(e.currentTarget); 
+        // e.stopPropagation();
+        if (e.target.nodeName === "BUTTON") {
+          // console.log("click em botao");
+        }
+      });
+
+
+    </script>
+  </body>
+</html>
