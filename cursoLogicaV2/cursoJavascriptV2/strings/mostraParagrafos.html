@@ -102,7 +102,7 @@
       const originTexts = Array.from(paragrafos).map((p) => p.innerText);
 	  const maxLength = 100
 
-	  paragrafos.forEach((p => {
+	  paragrafos.forEach((p, i) => {
 		if (p.innerText.length > maxLength) {
 			p.innerHTML = p.innerHTML.slice(0, maxLength) + "..."
 
@@ -110,14 +110,27 @@
 			button.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'
 			p.parentElement.classList.add("text-hidden")
 
-			button.addEventListener("click", toggleText)
+			button.addEventListener("click", function (e) {
+        toggleText(e, p, i)
+      })
 
 			p.parentElement.appendChild(button)
 		}
-	  }))
+	  })
 
-	  function toggleText(e) {
-		const card
+	  function toggleText(e, p, i) {
+		const card = e.currentTarget.parentElement
+
+    card.classList.toggle("text-hidden")
+    e.currentTarget.querySelector("i").classList.toggle("fa-chevron-down")
+    e.currentTarget.querySelector("i").classList.toggle("fa-chevron-up")
+
+    if(card.classList.contains("text-hidden")){
+      p.innerHTML = p.innerHTML.slice(0, maxLength) + "..."
+    } else {
+      p.innerHTML = originTexts[i]
+    }
+
 	  }
 
     </script>
