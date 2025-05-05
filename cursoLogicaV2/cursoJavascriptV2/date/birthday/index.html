@@ -77,11 +77,11 @@
         function checkBirthday(e) {
             console.log(e.target.value)
             const container = document.getElementById("quantoFalta")
-            const arr = e.target.value.split("-")
+            const arr = e.target.value.split("-").reverse()
             console.log(arr)
             console.log(arr.length)
             if (arr.length > 2) {
-
+                console.log(quantoFaltaPara(arr[1], arr[2]))
                 container.innerHTML = `
             <p>Falta(m) ${quantoFaltaPara(arr[1], arr[2])} dias para o seu aniversario</p>
         `
