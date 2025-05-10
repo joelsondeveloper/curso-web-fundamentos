@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+        const tempoInicial = Date.now()
+      let n = 0
+      setTimeout(function(){
+          console.log("timeout depois de 2000ms")
+          console.log("tempo decorrido: ", Date.now() - tempoInicial)
+      }, 2000)
+
+      let str = ""
+      let d = document.querySelector("div")
+      for(let i = 0; i < 1000; i++){
+          str += `${i} -- `
+          d.textContent = str
+      }
+
+      const intervalo = setInterval(function(){
+          console.log("intervalo n: ", n++)
+          if ( n > 6){
+              clearInterval(intervalo)
+          }
+      }, 1000)
+    </script>
+  </body>
+</html>
