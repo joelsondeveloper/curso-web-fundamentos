@@ -1,0 +1,25 @@
+:root {
+  --page-bg: #0b090d;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 400;
+  font-style: normal;
+  background: var(--page-bg) linear-gradient(to bottom, #1d0738ff, #1d073800)
+    fixed;
+
+  min-height: 100vh;
+}
+
+.logoicon {
+  background-color: #1d0738;
+}
