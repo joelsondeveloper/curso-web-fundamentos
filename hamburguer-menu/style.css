@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+main{
+    padding: 22px;
+}
+
+.nav-menu{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+}
+
+.hamburguer-button .icon{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.hamburguer-button[aria-expanded="true"] .icon::before{
+    content: "\2715";
+}
+
+.hamburguer-button[aria-expanded="false"] .icon::before{
+    content: "\2630";
+}
+
+.hamburguer-button-js-enabled + .menu{
+    display: flex;
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+    top: 60px;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.hamburguer-button-js-enabled + .menu-closed{
+    display: none;
+}
+
+.menu li a{
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu li a:hover,
+.menu li a:focus{
+    background-color: #555;
+}
+
+.hamburguer-button{
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 14px;
+}
+
+.hamburguer-button-js-enabled{
+    display: block;
+}
+
+@media (min-width: 768px) {
+
+    .hamburguer-button{
+        display: none;
+    }
+
+    .hamburguer-button-js-enabled + .menu{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+}

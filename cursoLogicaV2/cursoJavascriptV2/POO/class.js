@@ -9,12 +9,30 @@ function Animal(tipo) {
     }
 }
 
+function cachorro(nome){
+    this.nome = nome
+    Animal.call(this, "mamifero")
+    // cachorro.constructor = cachorro
+
+}
+cachorro.prototype = new Animal("mamifero")
+cachorro.prototype.constructor = cachorro
+
+let rex = new cachorro("Rex")
+console.log(rex)
+
 Animal.prototype.tipo = "desconhecido";
 
 
 Animal.prototype.obterTipo = function () {
   return this.tipo;
 };
+
+
+
+console.log(dog1)
+console.log(dog2)
+
 
 // ES6
 class AnimalC{
@@ -31,10 +49,19 @@ class AnimalC{
     }
 }
 
+class GatoC extends AnimalC{
+    constructor(nome){
+        super("mamifero")
+        this.nome = nome
+    }
+}
+
 AnimalC.prototype.tipo = "desconhecido"
 
 let animal = new AnimalC("anfibio")
 let sapo = new AnimalC()
+
+let mingal = new GatoC("Mingal")
 
 // console.log(animal)
 // console.log(cat)
@@ -44,3 +71,5 @@ let sapo = new AnimalC()
 // console.log(cat.obterTipo())
 console.log(AnimalC.prototype)
 console.log(Animal.prototype)
+console.log(mingal)
+console.log(rex)
