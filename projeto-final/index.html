@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body class="no-js">
-    <div class="logoicon">
+    <div class="logoicon md-hide">
       <div class="logoicon__logo">
         <img
           src="images/logo-ipsum.png"
@@ -34,6 +34,13 @@
 
     <header class="header">
       <div class="container">
+        <div class="logoicon__logo sm-hide md-show">
+          <img
+            src="images/logo-ipsum.png"
+            alt="ipsum Logotipo"
+            class="logoicon__logo__img"
+          />
+        </div>
         <nav class="nav-menu">
           <ul>
             <li><a href="#courses">Cursos Ipsum</a></li>
@@ -58,12 +65,15 @@
       </section>
 
       <section class="courses container" id="courses">
-        <h2 class="h2">
-          Os Melhores Cursos <span class="title--thin">Você encontra aqui</span>
-        </h2>
+        <div class="courses__title">
+          <h2 class="h2">
+            Os Melhores Cursos
+            <span class="title--thin">Você encontra aqui</span>
+          </h2>
+        </div>
         <div class="courses__list">
           <article class="courses__card">
-            <img src="images/cursos/curso1.jpg" alt="curso 1" />
+            <img class="courses__card__img" src="images/cursos/curso1.jpg" alt="curso 1" />
             <div class="courses__card__content">
               <h3 class="h3">
                 Web Fundamentos Front-end
@@ -81,7 +91,7 @@
             </div>
           </article>
           <article class="courses__card">
-            <img src="images/cursos/curso2.webp" alt="curso 1" />
+            <img class="courses__card__img" src="images/cursos/curso2.webp" alt="curso 1" />
             <div class="courses__card__content">
               <h3 class="h3">
                 Web Fundamentos Front-end
@@ -99,7 +109,7 @@
             </div>
           </article>
           <article class="courses__card">
-            <img src="images/cursos/curso3.jpg" alt="curso 1" />
+            <img class="courses__card__img" src="images/cursos/curso3.jpg" alt="curso 1" />
             <div class="courses__card__content">
               <h3 class="h3">
                 Web Fundamentos Front-end
@@ -175,7 +185,7 @@
               <div class="books__card__ctas">
                 <a href="#" class="btn btn--ghost">Ver demonstração</a>
                 <a href="#" class="btn btn--stroke">Saiba mais</a>
-                <a href="#" class="btn">COmprar Agora</a>
+                <a href="#" class="btn">Comprar Agora</a>
               </div>
             </div>
           </article>
@@ -197,7 +207,7 @@
               <div class="books__card__ctas">
                 <a href="#" class="btn btn--ghost">Ver demonstração</a>
                 <a href="#" class="btn btn--stroke">Saiba mais</a>
-                <a href="#" class="btn">COmprar Agora</a>
+                <a href="#" class="btn">Comprar Agora</a>
               </div>
             </div>
           </article>
@@ -205,26 +215,26 @@
       </section>
 
       <section class="news" id="channels">
-          <h2 class="h2">
-            Não perca as novidades da Ipsum
-            <span class="title--thin"
-              >Atualizacoes, Promoções, Novidades, Links uteis. Saiba tudo em
-              primeira mão</span
-            >
-          </h2>
-          <div class="news__content">
-            <p class="news__disclamer sr-only">Escolha seu app preferido</p>
-            <img src="images/arrow.svg" alt="news__seta" class="news__seta"/>
-            <div class="news__whatsapp">
-              <img src="images/whatsapp.svg" alt="whatsapp logo" />
-              <span class="sr-only">whatsapp</span>
-            </div>
-            <div class="news__telegram">
-              <img src="images/telegram.svg" alt="telegram logo" />
-              <span class="sr-only">telegram</span>
-            </div>
+        <h2 class="h2">
+          Não perca as novidades da Ipsum
+          <span class="title--thin"
+            >Atualizacoes, Promoções, Novidades, Links uteis. Saiba tudo em
+            primeira mão</span
+          >
+        </h2>
+        <div class="news__content">
+          <p class="news__disclamer sr-only">Escolha seu app preferido</p>
+          <img src="images/arrow.svg" alt="news__seta" class="news__seta" />
+          <div class="news__whatsapp">
+            <img src="images/whatsapp.svg" alt="whatsapp logo" />
+            <span class="sr-only">whatsapp</span>
+          </div>
+          <div class="news__telegram">
+            <img src="images/telegram.svg" alt="telegram logo" />
+            <span class="sr-only">telegram</span>
+          </div>
 
-            <a href="#" class="btn">Saiba mais</a>
+          <a href="#" class="btn">Saiba mais</a>
         </div>
       </section>
 
@@ -330,7 +340,11 @@
 
     <footer class="footer" id="socialmedia">
       <div class="container">
-        <img src="images/logo-ipsum.png" alt="ipsum logo" class="footer__logo" />
+        <img
+          src="images/logo-ipsum.png"
+          alt="ipsum logo"
+          class="footer__logo"
+        />
         <p>entre em contato conosco ou acesse nossas redes sociais</p>
         <ul class="footer__socialLinks">
           <li>
