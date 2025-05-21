@@ -17,10 +17,18 @@
   <body class="no-js">
     <div class="logoicon">
       <div class="logoicon__logo">
-        <img src="images/logo-ipsum.png" alt="ipsum Logotipo" class="logoicon__logo__img"/>
+        <img
+          src="images/logo-ipsum.png"
+          alt="ipsum Logotipo"
+          class="logoicon__logo__img"
+        />
       </div>
       <a href="#" aria-hidden="true">
-        <img src="images/menu-icon.svg" alt="menu icon" class="logoicon__icon__svg"/>
+        <img
+          src="images/menu-icon.svg"
+          alt="menu icon"
+          class="logoicon__icon__svg"
+        />
       </a>
     </div>
 
@@ -42,7 +50,9 @@
       <section class="hero container">
         <h1 class="hero__title">
           O melhor lugar para iniciar sua jornada na
-          <span class="hero__title--upper">Programação Front-end</span>
+          <span class="hero__title--upper"
+            >Programação <span class="no-wrap">Front-end</span></span
+          >
         </h1>
         <a href="#courses" class="btn hero__cta">Conheça nossos cursos</a>
       </section>
@@ -108,6 +118,7 @@
           </article>
         </div>
       </section>
+
       <section class="testimonials">
         <div class="container">
           <h2 class="h2">
@@ -125,9 +136,18 @@
               src="images/depoimentos/depoimento2.jpg"
               alt="depoimento 02 - seimplesmente o melhor curso de fundamentos"
             />
+            <img
+              src="images/depoimentos/depoimento1.jpg"
+              alt="depoimento 01 - curso bastante didatico"
+            />
+            <img
+              src="images/depoimentos/depoimento2.jpg"
+              alt="depoimento 02 - seimplesmente o melhor curso de fundamentos"
+            />
           </div>
         </section>
       </section>
+
       <section class="books container" id="ebooks">
         <h2 class="h2">
           E-books da Serliv
@@ -183,30 +203,32 @@
           </article>
         </div>
       </section>
-      <section class="news">
-        <h2 class="h2">
-          Não perca as novidades da Ipsum
-          <span class="title--thin"
-            >Atualizacoes, Promoções, Novidades, Links uteis. Saiba tudo em
-            primeira mão</span
-          >
-        </h2>
-        <div class="news__content">
-          <p class="news__disclamer">Escolha seu app preferido</p>
-          <img src="images/arrow.svg" alt="news__seta" />
-          <div class="news__whatsapp">
-            <img src="images/whatsapp.svg" alt="whatsapp logo" />
-            <span class="sr-only">whatsapp</span>
-          </div>
-          <div class="news__telegram">
-            <img src="images/telegram.svg" alt="telegram logo" />
-            <span class="sr-only">telegram</span>
-          </div>
 
-          <a href="#" class="btn">Saiba mais</a>
+      <section class="news" id="channels">
+          <h2 class="h2">
+            Não perca as novidades da Ipsum
+            <span class="title--thin"
+              >Atualizacoes, Promoções, Novidades, Links uteis. Saiba tudo em
+              primeira mão</span
+            >
+          </h2>
+          <div class="news__content">
+            <p class="news__disclamer sr-only">Escolha seu app preferido</p>
+            <img src="images/arrow.svg" alt="news__seta" class="news__seta"/>
+            <div class="news__whatsapp">
+              <img src="images/whatsapp.svg" alt="whatsapp logo" />
+              <span class="sr-only">whatsapp</span>
+            </div>
+            <div class="news__telegram">
+              <img src="images/telegram.svg" alt="telegram logo" />
+              <span class="sr-only">telegram</span>
+            </div>
+
+            <a href="#" class="btn">Saiba mais</a>
         </div>
       </section>
-      <section class="books-others">
+
+      <section class="books-others" id="amazon">
         <div class="container">
           <h2 class="h2">
             Livros que amamamos
@@ -225,7 +247,7 @@
               <div class="books-others__card__content">
                 <h3>Programação C++</h3>
                 <p>por <strong>Alexander Aronowitz</strong></p>
-                <div class="books-others__card__description">
+                <div class="books-others__card__description sr-only">
                   <p>Aprenda programação com a Linguagem C++.</p>
                   <p>2ª Edição.</p>
                   <p>
@@ -244,7 +266,48 @@
               <div class="books-others__card__content">
                 <h3>Padrões JavaScript</h3>
                 <p>por <strong>Stoyan Stefanov</strong></p>
-                <div class="books-others__card__description">
+                <div class="books-others__card__description sr-only">
+                  <p>
+                    Construa aplicações mais robustas usando padrões de projeto
+                    e de programação.
+                  </p>
+                  <p>O'Reilly Novatec Yahoo! Press.</p>
+                  <p>
+                    Um guia prático para aprimorar suas habilidades em
+                    JavaScript.
+                  </p>
+                </div>
+                <a href="#" class="btn">Comprar Agora</a>
+              </div>
+            </article>
+            <article class="books-others__card">
+              <img
+                src="images/livros-recomendados/livro1.jpg"
+                alt="capa do livro 1"
+              />
+              <div class="books-others__card__content">
+                <h3>Programação C++</h3>
+                <p>por <strong>Alexander Aronowitz</strong></p>
+                <div class="books-others__card__description sr-only">
+                  <p>Aprenda programação com a Linguagem C++.</p>
+                  <p>2ª Edição.</p>
+                  <p>
+                    Um guia completo para iniciantes e programadores
+                    experientes.
+                  </p>
+                </div>
+                <a href="#" class="btn">Comprar Agora</a>
+              </div>
+            </article>
+            <article class="books-others__card">
+              <img
+                src="images/livros-recomendados/livro3.jpg"
+                alt="capa do livro 1"
+              />
+              <div class="books-others__card__content">
+                <h3>Padrões JavaScript</h3>
+                <p>por <strong>Stoyan Stefanov</strong></p>
+                <div class="books-others__card__description sr-only">
                   <p>
                     Construa aplicações mais robustas usando padrões de projeto
                     e de programação.
@@ -261,15 +324,15 @@
           </div>
         </div>
 
-        <a href="#" class="btn btn--ghost">Ver mais produtos</a>
+        <a href="#" class="btn btn--ghost btn--center">Ver mais produtos</a>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="socialmedia">
       <div class="container">
-        <img src="images/logo.svg" alt="ipsum logo" />
+        <img src="images/logo-ipsum.png" alt="ipsum logo" class="footer__logo" />
         <p>entre em contato conosco ou acesse nossas redes sociais</p>
-        <ul class="socialLinks">
+        <ul class="footer__socialLinks">
           <li>
             <a href="#"
               ><img src="images/linkedin.svg" alt="linkedin logo" /><span
