@@ -54,14 +54,16 @@
     </header>
 
     <main>
-      <section class="hero container">
-        <h1 class="hero__title">
-          O melhor lugar para iniciar sua jornada na
-          <span class="hero__title--upper"
-            >Programação <span class="no-wrap">Front-end</span></span
-          >
-        </h1>
-        <a href="#courses" class="btn hero__cta">Conheça nossos cursos</a>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">
+            O melhor lugar para iniciar sua jornada na
+            <span class="hero__title--upper"
+              >Programação <span class="no-wrap">Front-end</span></span
+            >
+          </h1>
+          <a href="#courses" class="btn hero__cta">Conheça nossos cursos</a>
+        </div>
       </section>
 
       <section class="courses container" id="courses">
@@ -73,7 +75,11 @@
         </div>
         <div class="courses__list">
           <article class="courses__card">
-            <img class="courses__card__img" src="images/cursos/curso1.jpg" alt="curso 1" />
+            <img
+              class="courses__card__img"
+              src="images/cursos/curso1.jpg"
+              alt="curso 1"
+            />
             <div class="courses__card__content">
               <h3 class="h3">
                 Web Fundamentos Front-end
@@ -91,7 +97,11 @@
             </div>
           </article>
           <article class="courses__card">
-            <img class="courses__card__img" src="images/cursos/curso2.webp" alt="curso 1" />
+            <img
+              class="courses__card__img"
+              src="images/cursos/curso2.webp"
+              alt="curso 1"
+            />
             <div class="courses__card__content">
               <h3 class="h3">
                 Web Fundamentos Front-end
@@ -109,7 +119,11 @@
             </div>
           </article>
           <article class="courses__card">
-            <img class="courses__card__img" src="images/cursos/curso3.jpg" alt="curso 1" />
+            <img
+              class="courses__card__img"
+              src="images/cursos/curso3.jpg"
+              alt="curso 1"
+            />
             <div class="courses__card__content">
               <h3 class="h3">
                 Web Fundamentos Front-end
@@ -223,15 +237,22 @@
           >
         </h2>
         <div class="news__content">
-          <p class="news__disclamer sr-only">Escolha seu app preferido</p>
-          <img src="images/arrow.svg" alt="news__seta" class="news__seta" />
-          <div class="news__whatsapp">
+          <p class="news__disclamer sm-sr-only">
+            Escolha seu app <br />
+            preferido
+          </p>
+          <img
+            src="images/arrow.svg"
+            alt="news__seta"
+            class="seta sm-hide md-show"
+          />
+          <div class="news__whatsapp news_icon_btn">
             <img src="images/whatsapp.svg" alt="whatsapp logo" />
-            <span class="sr-only">whatsapp</span>
+            <span class="sm-sr-only">whatsapp</span>
           </div>
-          <div class="news__telegram">
+          <div class="news__telegram news_icon_btn">
             <img src="images/telegram.svg" alt="telegram logo" />
-            <span class="sr-only">telegram</span>
+            <span class="sm-sr-only">telegram</span>
           </div>
 
           <a href="#" class="btn">Saiba mais</a>
@@ -241,28 +262,43 @@
       <section class="books-others" id="amazon">
         <div class="container">
           <h2 class="h2">
-            Livros que amamamos
+            Livros que amamos
             <span class="title--thin"
               >Livros digitais para você se especializar ainda mais
             </span>
           </h2>
         </div>
         <div class="books-others__carroussel">
-          <div class="books-others__wrapper">
+          <button class="books-others__btn prev"> &lt; </button>
+          <div class="books-others__wrapper ">
             <article class="books-others__card">
               <img
                 src="images/livros-recomendados/livro1.jpg"
                 alt="capa do livro 1"
+                class="books-others__card__img"
               />
               <div class="books-others__card__content">
                 <h3>Programação C++</h3>
                 <p>por <strong>Alexander Aronowitz</strong></p>
-                <div class="books-others__card__description sr-only">
+                <div class="books-others__card__description sm-sr-only">
                   <p>Aprenda programação com a Linguagem C++.</p>
                   <p>2ª Edição.</p>
                   <p>
                     Um guia completo para iniciantes e programadores
-                    experientes.
+                    experientes, cobrindo desde os fundamentos da linguagem até
+                    conceitos avançados como ponteiros, orientação a objetos,
+                    manipulação de memória e estrutura de dados.
+                  </p>
+                  <p>
+                    Repleto de exemplos práticos, exercícios desafiadores e
+                    dicas valiosas, este livro é ideal para quem quer dominar o
+                    C++ e se destacar no mundo da programação de alto
+                    desempenho.
+                  </p>
+                  <p>
+                    Com uma abordagem didática e progressiva, você vai aprender
+                    a resolver problemas reais, entender a lógica por trás do
+                    código e desenvolver projetos robustos e eficientes.
                   </p>
                 </div>
                 <a href="#" class="btn">Comprar Agora</a>
@@ -272,19 +308,37 @@
               <img
                 src="images/livros-recomendados/livro3.jpg"
                 alt="capa do livro 1"
+                class="books-others__card__img"
               />
               <div class="books-others__card__content">
                 <h3>Padrões JavaScript</h3>
                 <p>por <strong>Stoyan Stefanov</strong></p>
-                <div class="books-others__card__description sr-only">
+                <div class="books-others__card__description sm-sr-only">
                   <p>
                     Construa aplicações mais robustas usando padrões de projeto
                     e de programação.
                   </p>
-                  <p>O'Reilly Novatec Yahoo! Press.</p>
+                  <p>O'Reilly · Novatec · Yahoo! Press.</p>
                   <p>
                     Um guia prático para aprimorar suas habilidades em
-                    JavaScript.
+                    JavaScript, ensinando como escrever código limpo, modular e
+                    de fácil manutenção.
+                  </p>
+                  <p>
+                    Descubra como aplicar padrões clássicos de design (como
+                    Singleton, Factory e Observer) no ecossistema JavaScript
+                    moderno, elevando a qualidade dos seus projetos a um novo
+                    nível.
+                  </p>
+                  <p>
+                    Ideal para quem já conhece a linguagem, mas quer escrever
+                    código mais profissional, reutilizável e preparado para
+                    crescer sem virar um monstro difícil de manter.
+                  </p>
+                  <p>
+                    Aprenda com exemplos reais e dicas direto de quem já
+                    trabalhou no coração do Yahoo!, aplicando técnicas usadas
+                    por grandes empresas no mundo todo.
                   </p>
                 </div>
                 <a href="#" class="btn">Comprar Agora</a>
@@ -294,16 +348,30 @@
               <img
                 src="images/livros-recomendados/livro1.jpg"
                 alt="capa do livro 1"
+                class="books-others__card__img"
               />
               <div class="books-others__card__content">
                 <h3>Programação C++</h3>
                 <p>por <strong>Alexander Aronowitz</strong></p>
-                <div class="books-others__card__description sr-only">
+                <div class="books-others__card__description sm-sr-only">
                   <p>Aprenda programação com a Linguagem C++.</p>
                   <p>2ª Edição.</p>
                   <p>
                     Um guia completo para iniciantes e programadores
-                    experientes.
+                    experientes, cobrindo desde os fundamentos da linguagem até
+                    conceitos avançados como ponteiros, orientação a objetos,
+                    manipulação de memória e estrutura de dados.
+                  </p>
+                  <p>
+                    Repleto de exemplos práticos, exercícios desafiadores e
+                    dicas valiosas, este livro é ideal para quem quer dominar o
+                    C++ e se destacar no mundo da programação de alto
+                    desempenho.
+                  </p>
+                  <p>
+                    Com uma abordagem didática e progressiva, você vai aprender
+                    a resolver problemas reais, entender a lógica por trás do
+                    código e desenvolver projetos robustos e eficientes.
                   </p>
                 </div>
                 <a href="#" class="btn">Comprar Agora</a>
@@ -313,26 +381,46 @@
               <img
                 src="images/livros-recomendados/livro3.jpg"
                 alt="capa do livro 1"
+                class="books-others__card__img"
               />
               <div class="books-others__card__content">
                 <h3>Padrões JavaScript</h3>
                 <p>por <strong>Stoyan Stefanov</strong></p>
-                <div class="books-others__card__description sr-only">
+                <div class="books-others__card__description sm-sr-only">
                   <p>
                     Construa aplicações mais robustas usando padrões de projeto
                     e de programação.
                   </p>
-                  <p>O'Reilly Novatec Yahoo! Press.</p>
+                  <p>O'Reilly · Novatec · Yahoo! Press.</p>
                   <p>
                     Um guia prático para aprimorar suas habilidades em
-                    JavaScript.
+                    JavaScript, ensinando como escrever código limpo, modular e
+                    de fácil manutenção.
+                  </p>
+                  <p>
+                    Descubra como aplicar padrões clássicos de design (como
+                    Singleton, Factory e Observer) no ecossistema JavaScript
+                    moderno, elevando a qualidade dos seus projetos a um novo
+                    nível.
+                  </p>
+                  <p>
+                    Ideal para quem já conhece a linguagem, mas quer escrever
+                    código mais profissional, reutilizável e preparado para
+                    crescer sem virar um monstro difícil de manter.
+                  </p>
+                  <p>
+                    Aprenda com exemplos reais e dicas direto de quem já
+                    trabalhou no coração do Yahoo!, aplicando técnicas usadas
+                    por grandes empresas no mundo todo.
                   </p>
                 </div>
                 <a href="#" class="btn">Comprar Agora</a>
               </div>
             </article>
           </div>
+          <button class="books-others__btn next"> &gt; </button>
         </div>
+        <div class="carroussel-indicators"></div>
 
         <a href="#" class="btn btn--ghost btn--center">Ver mais produtos</a>
       </section>
@@ -374,5 +462,18 @@
         </ul>
       </div>
     </footer>
+
+    <script src="js/depoimentos.js"></script>
+    <script src="js/carroussel.js"></script>
+    <script>
+      document.body.classList.replace("no-js", "js");
+
+      setupTestimonials({
+        wrapper: ".testimonials__carroussel__wrapper",
+        items: "img",
+      });
+
+      new Carroussel(".books-others__carroussel").init();
+    </script>
   </body>
 </html>
