@@ -116,6 +116,10 @@ h1 {
   align-items: center;
 }
 
+.hero__title {
+  margin-bottom: 1.25em;
+}
+
 .hero__title--upper {
   display: block;
   margin-top: 0.5rem;
@@ -599,7 +603,6 @@ main {
       height: 100%;
       pointer-events: none;
       z-index: 2;
-      /* background-color: red; */
     }
 
     &::before {
@@ -885,7 +888,7 @@ main {
   .hero .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 5rem;
+    /* gap: 5rem; */
   }
 
   .hero .container > * {
@@ -922,4 +925,59 @@ main {
       animation-play-state: paused;
     }
   }
+
+  .books-others__carroussel {
+    position: relative;
+  }
+
+  .books-others__carroussel__wrapper {
+    --currentIndex: 0;
+    
+  }you
+
+  .books-others__card {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(calc(var(--currentIndex) * -100%));
+  }
+
+  .books-others__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+  }
+
+  .prev, .next {
+  background-color: red;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  z-index: 2;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.prev {
+  left: var(--grid-margin);
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+}
+
+.next {
+  right: var(--grid-margin);
+}
 }

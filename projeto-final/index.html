@@ -268,10 +268,10 @@
             </span>
           </h2>
         </div>
-        <div class="books-others__carroussel">
-          <button class="books-others__btn prev"> &lt; </button>
-          <div class="books-others__wrapper ">
-            <article class="books-others__card">
+        <div class="books-others__carroussel" data-carroussel-indicators="book-others-indicators">
+          <button class="books-others__btn prev" data-carroussel-prev></button>
+          <div class="books-others__wrapper data-carroussel-wrapper" data-carroussel-wrapper>
+            <article class="books-others__card active" data-carroussel-itens="0">
               <img
                 src="images/livros-recomendados/livro1.jpg"
                 alt="capa do livro 1"
@@ -304,7 +304,7 @@
                 <a href="#" class="btn">Comprar Agora</a>
               </div>
             </article>
-            <article class="books-others__card">
+            <article class="books-others__card" data-carroussel-itens="1">
               <img
                 src="images/livros-recomendados/livro3.jpg"
                 alt="capa do livro 1"
@@ -344,7 +344,7 @@
                 <a href="#" class="btn">Comprar Agora</a>
               </div>
             </article>
-            <article class="books-others__card">
+            <article class="books-others__card" data-carroussel-itens="2">
               <img
                 src="images/livros-recomendados/livro1.jpg"
                 alt="capa do livro 1"
@@ -377,7 +377,7 @@
                 <a href="#" class="btn">Comprar Agora</a>
               </div>
             </article>
-            <article class="books-others__card">
+            <article class="books-others__card" data-carroussel-itens="3">
               <img
                 src="images/livros-recomendados/livro3.jpg"
                 alt="capa do livro 1"
@@ -418,9 +418,9 @@
               </div>
             </article>
           </div>
-          <button class="books-others__btn next"> &gt; </button>
+          <button class="books-others__btn next" data-carroussel-next></button>
         </div>
-        <div class="carroussel-indicators"></div>
+        <div class="carroussel-indicators" id="book-others-indicators"></div>
 
         <a href="#" class="btn btn--ghost btn--center">Ver mais produtos</a>
       </section>
