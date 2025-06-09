@@ -12,7 +12,6 @@ class Carroussel {
   }
 
   init() {
-    console.log(this);
     this.createIndicators();
     this.addListeners();
     this.updateCarroussel();
@@ -24,7 +23,10 @@ class Carroussel {
       // indicator.dataset.carrousselIndex = index;
       indicator.setAttribute("data-carroussel-index", index);
       indicator.classList.add("indicator");
-      indicator.textContent = index;
+      // indicator.textContent = index;
+      if (index === this.currentIndex) {
+        indicator.classList.add("active");
+      }
       this.indicatorsContainer.appendChild(indicator);
     });
   }
@@ -41,7 +43,7 @@ class Carroussel {
     });
     this.indicatorsContainer.addEventListener("click", (e) => {
       if (!e.target.dataset.carrousselIndex) return;
-      this.goToSlide(parseInt(e.target.getAttribute("data-carroussel-indicator")));
+      this.goToSlide(parseInt(e.target.getAttribute("data-carroussel-index")));
     });
   }
 
@@ -49,9 +51,9 @@ class Carroussel {
     this.wrapper.style.setProperty("--currentIndex", this.currentIndex);
 
 
-    // console.log(this.wrapper.querySelectorAll(`[data-carroussel-itens="${this.currentIndex}"]`));
-    this.wrapper.querySelector(".active").classList.remove("active");
-    this.wrapper.querySelector(`[data-carroussel-itens="${this.currentIndex}"]`).classList.add("active");
+   
+    this.indicatorsContainer.querySelector(`.active`).classList.remove("active");
+    this.indicatorsContainer.querySelector(`[data-carroussel-index="${this.currentIndex}"]`).classList.add("active");
   }
 
   goToSlide(index) {
