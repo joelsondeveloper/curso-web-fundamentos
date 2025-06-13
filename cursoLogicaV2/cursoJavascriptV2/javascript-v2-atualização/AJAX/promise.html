@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+      console.log("inicio do codigo");
+
+      const promessa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("sucesso vindo do timeout");
+        }, 1000);
+      });
+
+      console.log(promessa);
+
+      console.log("fim do codigo");
+    </script>
+  </body>
+</html>
