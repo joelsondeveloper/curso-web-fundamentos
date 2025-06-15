@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async-await</title>
+  </head>
+  <body>
+    <ul id="lista"></ul>
+
+    <script>
+      console.log("inicio do codigo");
+
+      const lista = document.querySelector("#lista");
+
+      function mostrarDados(dados) {
+        let resultado = "";
+
+        dados.forEach((dado) => {
+          resultado += `<li>Nome: ${dado.nome}, E-mail: ${dado.email}</li>`;
+        });
+
+        lista.innerHTML = resultado;
+      }
+
+      async function buscarDados() {
+        console.log("inicio da requisicao");
+        try {
+          const resposta = await fetch("./dados.json");
+          if (!resposta.ok) {
+            throw Error("Erro na requisição");
+          }
+          const dados = await resposta.json();
+          mostrarDados(dados);
+        } catch (erro) {
+          console.log("Erro: ", erro);
+        }
+        console.log("fim da requisicao");
+      }
+
+      buscarDados();
+
+      console.log("fim do codigo");
+    </script>
+  </body>
+</html>

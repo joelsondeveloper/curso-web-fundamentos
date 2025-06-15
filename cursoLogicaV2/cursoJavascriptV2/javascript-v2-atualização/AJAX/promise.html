@@ -11,11 +11,28 @@
 
       const promessa = new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve("sucesso vindo do timeout");
+          // resolve("sucesso vindo do timeout");
+          reject("erro vindo do timeout");
         }, 1000);
       });
 
-      console.log(promessa);
+      promessa
+        .then(resposta => {
+          console.log(resposta);
+          return "-----------"
+        })
+        .then(resposta => {
+          console.log("segundo then", resposta);
+        })
+        .then(() => {
+          console.log("terceiro then");
+        })
+        .catch(erro => {
+          console.log("Erro:", erro);
+        })
+        .finally(() => {
+          console.log("finally sempre é executado");
+        })
 
       console.log("fim do codigo");
     </script>

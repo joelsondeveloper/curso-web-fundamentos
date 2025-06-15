@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json-fake</title>
+  </head>
+  <body>
+
+    <form action="#" method="post" id="formCadastro">
+        <input type="submit" value="cadastrar" id="btnCadastrar">
+    </form>
+
+    <script>
+        document.querySelector("#formCadastro").addEventListener("submit", function(evt) {
+            evt.preventDefault();
+            console.log("clicou no botao");
+            cadastrarPost(1);
+        });
+      async function buscarPostUsuario(id) {
+        try {
+          const resposta = await fetch(
+            `https://jsonplaceholder.typicode.com/users/${id}/posts`
+          );
+          if (!resposta.ok) {
+            throw Error("Erro na requisição");
+          }
+          const dados = await resposta.json();
+          mostrarDados(dados);
+        } catch (error) {
+          alert(`Erro: ${error}`);
+        }
+      }
+
+      buscarPostUsuario(1);
+
+      function mostrarDados(dados) {
+        console.log(dados);
+      }
+
+      async function cadastrarPost(userId) {
+        try {
+          const resposta = await fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            body: JSON.stringify({
+              title: "novo titulo",
+              body: "conteudo do corpo do artigo",
+              userId,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          });
+
+          const dados = await resposta.json();
+          console.log(dados);
+        } catch (error) {
+          alert(`Erro: ${error}`);
+        }
+      }
+    </script>
+  </body>
+</html>
