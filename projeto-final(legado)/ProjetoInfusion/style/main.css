@@ -44,6 +44,7 @@ img {
 .header {
   background: #fff;
   width: 100%;
+  z-index: 3;
 }
 
 .js .header {
@@ -72,6 +73,67 @@ img {
 
 .js .header__nav {
   transition: max-height 1s ease;
+}
+
+.js .laptop-slider,
+.js .quote-container {
+  overflow: hidden;
+}
+
+.js .laptop-slider .slideshow,
+.js .quote-container .quote-slideshow {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  max-width: 950px;
+}
+
+.js .laptop-slider figure,
+.js .quote-slideshow figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  img {
+    width: 100%;
+  }
+}
+
+.js .laptop-slider figure.show,
+.js .quote-slideshow figure.show {
+  position: static;
+  opacity: 1;
+}
+
+.js .laptop-slider .prev,
+.js .laptop-slider .next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+.js .quote-slideshow .prev,
+.js .quote-slideshow .next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+.js .laptop-slider .prev,
+.js .quote-slideshow .prev {
+  left: 0;
+}
+
+.js .laptop-slider .next,
+.js .quote-slideshow .next {
+  right: 0;
 }
 
 .header__nav ul {
@@ -284,6 +346,8 @@ img {
   font-size: 30px;
   font-style: italic;
   font-weight: normal;
+  padding: 0 30px;
+  text-align: center;
 }
 
 .quote-slideshow figcaption {

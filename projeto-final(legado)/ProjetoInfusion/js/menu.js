@@ -12,6 +12,7 @@ function Menu(config) {
 
     var _opened = false;
     var _this = this
+    closeMenu()
 
     this.btn.removeAttribute('style')
     // closeMenu()
@@ -19,14 +20,13 @@ function Menu(config) {
     if(this.maxWidth) {
         window.addEventListener('resize', e => {
             _this.nav.removeAttribute('style')
-            _opened = true
         })
     } else if(!this.nav.getAttribute('style')) {
         closeMenu()
 
         if(window.innerWidth >= _this.maxWidth) {
             console.log('open')
-            closeMenu()
+            openMenu()
         }
     }
 

@@ -13,5 +13,14 @@
     var carouselImgs = new Carousel ({
         container: '.laptop-slider .slideshow',
         itens: '.laptop-slider .slideshow figure',
+        btnPrev: '.laptop-slider .prev',
+        btnNext: '.laptop-slider .next',
+    })
+
+    var carouselQuotes = new Carousel ({
+        container: '.quote-slideshow',
+        itens: '.quote-slideshow figure',
+        btnPrev: '.quote-slideshow .prev',
+        btnNext: '.quote-slideshow .next',
     })
 })()
