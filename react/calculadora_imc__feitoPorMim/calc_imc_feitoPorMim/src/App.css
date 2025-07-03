@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.section {
+  background-color: #0d0d2e;
+  padding: 1.8rem 1.5rem; 
+  margin: auto;
+}
+
+button {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  opacity: .8;
+}
