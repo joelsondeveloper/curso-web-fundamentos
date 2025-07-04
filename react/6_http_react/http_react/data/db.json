@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "name": "capa de chuva",
+      "price": "50.50",
+      "id": "5"
+    },
+    {
+      "name": "teclado",
+      "price": "110",
+      "id": "6"
+    },
+    {
+      "name": "cadeira",
+      "price": "200",
+      "id": "7"
+    },
+    {
+      "id": "9bd3",
+      "name": "pistola de agua",
+      "price": "120"
+    },
+    {
+      "id": "1dcf",
+      "name": "camisa",
+      "price": "50"
+    },
+    {
+      "id": "6180",
+      "name": "teste product",
+      "price": "123"
+    },
+    {
+      "id": "9c41",
+      "name": "teste2",
+      "price": "25"
+    },
+    {
+      "id": "905e",
+      "name": "carregando?",
+      "price": "99"
+    },
+    {
+      "id": "c6b1",
+      "name": "teste2",
+      "price": "780"
+    },
+    {
+      "id": "dcdf",
+      "name": "carregando555",
+      "price": "50"
+    }
+  ]
+}
