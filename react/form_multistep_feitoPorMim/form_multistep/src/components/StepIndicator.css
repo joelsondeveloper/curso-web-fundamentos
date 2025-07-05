@@ -1,0 +1,27 @@
+.indicators {
+    display: flex;
+    justify-content: space-between;
+}
+
+.indicators .indicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+}
+.indicators .indicator-now {
+    color: rgb(233, 61, 233);
+    }
+
+.indicators .indicator span {
+    font-size: .8rem;
+}
+
+
+.indicators .separator {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #aaa;
+    margin: .6rem .8rem;
+}
