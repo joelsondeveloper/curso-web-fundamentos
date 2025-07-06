@@ -14,6 +14,8 @@ const FormStep = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [satisfation, setSatisfation] = useState("");
+  const [message, setMessage] = useState("");
 
   const goNext = (e) => {
     e.preventDefault();
@@ -28,7 +30,7 @@ const FormStep = () => {
 
   const goPrevious = (e) => {
     e.preventDefault();
-    setStep(step - 1);
+    step != 1 && setStep(step - 1);
   };
 
   return (
@@ -44,18 +46,17 @@ const FormStep = () => {
       )}
       {step === 2 && (
         <Step2
-          name={name}
-          setName={setName}
-          email={email}
-          setEmail={setEmail}
+          satisfation={satisfation}
+          setSatisfation={setSatisfation}
+          message={message}
+          setMessage={setMessage}
         />
       )}
       {step === 3 && (
         <Step3
           name={name}
-          setName={setName}
-          email={email}
-          setEmail={setEmail}
+          satisfation={satisfation}
+          message={message}
         />
       )}
       <div className="form-btn">

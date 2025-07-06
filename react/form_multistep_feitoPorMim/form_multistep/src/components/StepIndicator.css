@@ -9,9 +9,10 @@
     justify-content: center;
     align-items: center;
     color: #444;
+    text-align: center;
 }
 .indicators .indicator-now {
-    color: rgb(233, 61, 233);
+    color: #ad55ad;
     }
 
 .indicators .indicator span {

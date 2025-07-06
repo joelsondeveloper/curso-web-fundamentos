@@ -1,49 +1,127 @@
 .form {
-    background-color: #fff;
-    width: clamp(320px, 80vw, 500px);
+  background-color: #fff;
+  width: clamp(320px, 80vw, 600px);
 
-    min-height: 400px;
-    padding: 1.4rem 5rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 4px 4px 10px #888;
-    border-radius: 5px;
+  min-height: 400px;
+  padding: 1.4rem clamp(1rem, 5vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 10px #888;
+  border-radius: 5px;
 }
 
 .form-inputs {
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .form-inputs label {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .form-inputs input {
-    padding: .4rem;
-    border: 0;
-    box-shadow: 2px 2px 5px #888;
+  padding: 0.4rem;
+  border: 0;
+  box-shadow: 2px 2px 5px #888;
 }
 
 .form-btn {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    flex: 1;
-    gap: 1rem;
-    /* background-color: #888; */
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex: 1;
+  gap: 1rem;
+  /* background-color: #888; */
 }
 
 .form-btn button {
-    padding: .4rem 1rem;
-    border: 0;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    cursor: pointer;
+  padding: 0.4rem 1rem;
+  border: 0;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.form-satisfation {
+  display: flex;
+  gap: 0.5rem;
+  font-size: .8rem;
+  justify-content: space-between;
+}
+
+.form-satisfation label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* gap: 0.5rem; */
+}
+
+.form-satisfation input[type="radio"] {
+  display: none;
+}
+
+.form-satisfation input[type="radio"]:checked + .satisfation-icon {
+  background-color: #ad55ad;
+}
+
+.form-satisfation input[type="radio"]:checked + .satisfation-icon + span {
+  color: #ad55ad;
+}
+
+.satisfation-icon {
+  background-color: black;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.form-message textarea {
+  padding: 0.4rem;
+  border: 0;
+  box-shadow: 2px 2px 5px #888;
+  resize: vertical;
+  min-height: 8rem;
+  max-height: 12rem;
+}
+
+.form-resume {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  color: #444;
+  font-size: .8rem;
+}
+
+.form-resume h2 {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.resume h3 {
+  color: #000;
+  font-size: 1rem;
+}
+
+.resume p {
+  color: #000;
+  font-size: .8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resume p span {
+  color: #444;
+  font-size: .8rem;
+  font-weight: 400;
 }

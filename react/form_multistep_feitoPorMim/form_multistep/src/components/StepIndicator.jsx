@@ -38,11 +38,10 @@ const StepIndicator = ({ stepNow }) => {
       </div> */}
       {steps.map((step, index) => (
         <React.Fragment key={index}>
-          <div className={stepNow == index + 1 ? "indicator indicator-now" : "indicator"} >
+          <div className={index + 1 <= stepNow ? "indicator indicator-now" : "indicator"} >
           {step.icon}
           <span>{step.label}</span>
         </div>
-          {console.log(step.length)}
           {index < steps.length - 1 && <div className="separator"></div>}
         </React.Fragment>
       ))}
