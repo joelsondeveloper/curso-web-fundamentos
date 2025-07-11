@@ -1,21 +1,20 @@
-import React from "react";
-
-// 6 - carregamento de dados
 import { useFetch } from "../hooks/useFetch";
 
-// 7 - rota dinamica
-import { Link } from "react-router-dom";
 
-const Home = () => {
-  const url = "http://localhost:3000/products";
+import { Link, useSearchParams } from "react-router-dom";
 
+const Search = () => {
+    
+    const [searchParams] = useSearchParams()
+    
+    const url = "http://localhost:3000/products?" + searchParams;
+    
 
-  const { data: items } = useFetch(url);
+    const { data: items } = useFetch(url);
 
   return (
     <div>
-      <h1>Home</h1>
-      {/* 6 - carregando dados  */}
+      <h1>Resultados da pesquisa</h1>
       <ul className="products">
         {items &&
           items.map((item) => (
@@ -31,4 +30,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;

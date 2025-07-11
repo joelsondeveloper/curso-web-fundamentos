@@ -18,6 +18,15 @@ import ErrorPage from './routes/ErrorPage.jsx'
 // 3 - componente base 
 import Home from './routes/Home.jsx'
 
+// 7 - rota dinamica
+import Product from './routes/Product.jsx'
+
+// 8 - rotas aninhadas
+import Info from './routes/Info.jsx'
+
+// 9 - search params 
+import Search from './routes/Search.jsx'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +41,21 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
+      },
+      // 7 - rota dinamica
+      {
+        path: "products/:id",
+        element: <Product />
+      },
+      // 8 - rotas aninhadas
+      {
+        path: "products/:id/info",
+        element: <Info />
+      },
+      // 9 - search params 
+      {
+        path: "search", 
+        element: <Search />
       }
     ]
   },
