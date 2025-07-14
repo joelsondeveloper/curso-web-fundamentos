@@ -7,7 +7,7 @@ import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
-  Route
+  Navigate
 } from "react-router-dom"
 
 import Contact from './routes/Contact.jsx'
@@ -56,6 +56,11 @@ const router = createBrowserRouter([
       {
         path: "search", 
         element: <Search />
+      },
+      // 10 - redirect 
+      {
+        path: "teste",
+        element: <Navigate to="/" />
       }
     ]
   },
