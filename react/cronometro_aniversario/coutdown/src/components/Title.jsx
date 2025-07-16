@@ -1,10 +1,10 @@
-import React from 'react'
+import "./title.css"
 
 const Title = ({title}) => {
   return (
-    <div>
-      <h1>{title}</h1>
-    </div>
+    <h1 className="title">
+      {title}
+    </h1>
   )
 }
 
