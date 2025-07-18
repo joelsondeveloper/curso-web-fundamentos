@@ -1,29 +1,33 @@
-import Title from './components/Title'
-import Counter from './components/Counter'
+import { Outlet } from "react-router-dom";
 
-import NewYear from "./assets/newYear.jpg"
+import { useContext } from "react";
+import { countdownContext } from "./context/countdownContext";
 
-import useCoutdown from './hooks/useCoutdown'
+import NewYear from "./assets/newYear.jpg";
 
-import './App.css'
+import "./App.css";
 
 function App() {
+  const { event } = useContext(countdownContext);
 
-  const [day, hour, minute, second] = useCoutdown("jan 1, 2026 00:00:00")
+  let eventImage = null;
+
+  if (event) eventImage = event.image;
 
   return (
-    <div className='app' style={{backgroundImage: `url(${NewYear})`}}>
+    <div
+      className="app"
+      style={
+        eventImage
+          ? { backgroundImage: `url(${eventImage})` }
+          : { backgroundImage: `url(${NewYear})` }
+      }
+    >
       <div className="container">
-        <Title title="Contagem regressiva para 2023" />
-        <div className="countdown-container">
-          <Counter title="Dias" number={day}/>
-          <Counter title="Horas" number={hour}/>
-          <Counter title="Minutos" number={minute}/>
-          <Counter title="Segundos" number={second}/>
-        </div>
+        <Outlet />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
