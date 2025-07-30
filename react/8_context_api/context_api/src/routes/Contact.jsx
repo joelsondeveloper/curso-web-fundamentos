@@ -1,17 +1,21 @@
-// 3 - alterando o valor de context 
+// 3 - alterando o valor de context
 import { useContext } from "react";
 import { CounterContext } from "../context/CounterContext";
 
-const Contact = () => {
+// 5 - contexto mais complexo
+import { useTitleColorContext } from "../hooks/useTitleColorContext";
 
-  const {counter} = useContext(CounterContext)
+const Contact = () => {
+  const { counter } = useContext(CounterContext);
+
+  const { color } = useTitleColorContext();
 
   return (
     <div>
-      <h1>Pagina de contatos</h1>
+      <h1 style={{color: color}}>Pagina de contatos</h1>
       <p>valor do counter: {counter}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

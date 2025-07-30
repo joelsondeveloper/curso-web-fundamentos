@@ -1,5 +1,4 @@
 // 1 - criar context
-import { Children } from "react";
 import { createContext, useState } from "react";
 
 export const CounterContext = createContext();
