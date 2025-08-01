@@ -13,6 +13,7 @@ ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 a {
@@ -25,17 +26,23 @@ p {
   color: #747990;
 }
 
-.btn, .btn-secondary {
+.btn,
+.btn-secondary {
   background-color: #7703fc;
   color: #fff;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
-  transition: .4s;
+  transition: 0.4s;
   cursor: pointer;
+  display: block;
 }
 
 .btn:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
-.
+.btn-secondary {
+  background-color: #fff;
+  color: #283252;
+  border: 1px solid #cfcfcf;
+}
