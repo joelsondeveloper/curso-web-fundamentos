@@ -11,7 +11,7 @@ const conn = require("./db/conn");
 
 conn();
 
-// routes 
+// routes
 const routes = require("./routes/router");
 
 app.use("/api", routes);
