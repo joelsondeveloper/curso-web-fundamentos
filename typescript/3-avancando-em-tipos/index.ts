@@ -204,3 +204,25 @@ function showDirection(direction: "esquerda" | "direita" | "frente" | "tras") {
 
 showDirection("esquerda")
 // showDirection("outro")
+
+// 16 - non-null assertion operator
+const p = document.getElementById("some-p")
+
+console.log(p!.innerHTML)
+
+// 17 - bigint
+let n: bigint
+
+n = 1000n
+
+console.log(n)
+
+console.log(typeof n)
+
+console.log(n * 2n)
+
+// 18 - symbol
+const symbol1: symbol = Symbol("a")
+const symbol2: symbol = Symbol("a")
+
+console.log(symbol1 === symbol2)

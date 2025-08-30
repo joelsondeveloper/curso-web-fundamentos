@@ -117,6 +117,19 @@ function showDirection(direction) {
     console.log(`Andando para a ${direction}`);
 }
 showDirection("esquerda");
-export {};
 // showDirection("outro")
+// 16 - non-null assertion operator
+const p = document.getElementById("some-p");
+console.log(p.innerHTML);
+// 17 - bigint
+let n;
+n = 1000n;
+console.log(n);
+console.log(typeof n);
+console.log(n * 2n);
+// 18 - symbol
+const symbol1 = Symbol("a");
+const symbol2 = Symbol("a");
+console.log(symbol1 === symbol2);
+export {};
 //# sourceMappingURL=index.js.map
